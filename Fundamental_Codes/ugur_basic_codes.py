@@ -400,6 +400,7 @@ Created on 18 Ara 2016
 # print(os.path.isdir('C:\\Windows\\System32\\calc.exe'))
 # print(os.path.isfile('C:\\Windows\\System32\\calc.exe'))
 
+#----------------------------------------------------------------------------------------
 # # Var olan dosya içeriğini açma dosya açma
 # helloFile = open('C:\\Users\\Purgoufr\\Desktop\\hello.txt')
 # helloContent = helloFile.read()
@@ -417,11 +418,146 @@ Created on 18 Ara 2016
 # UgurTextFile.close()
 # print(content)
 
+#----------------------------------------------------------------------------------------
+# #copy paste yapma(copy file, destination file(paste) (source,destination) 
+# #Bu dosyalar varolmadığı için hata verecek gerçekte varolan dosyalarda denersen çalıştığını göreceksin
+# import shutil, os
+# os.chdir('C:\\')
+# shutil.copy('C:\\spam.txt', 'C:\\delicious')
+# #eggs.txt dosyasını kopyaladı fakat ismini değiştirerek yapıştırdı eggs2.txt olarak
+# shutil.copy('eggs.txt', 'C:\\delicious\\eggs2.txt')
+# #sadece tek bir dosya degil ('.txt' gibi değil klasör olarak) dosyanın alt dosyalarını da kopyalamak için
+# shutil.copytree('C:\\bacon', 'C:\\bacon_backup')
 
+# #dosya taşımak için(yer değiştirmek)(source,destination) dosya isim değiştirmek için
+# import shutil
+# shutil.move('C:\\bacon.txt', 'C:\\eggs')
 
+# #Hem yer değiştirip hem de yeni isim vermek için
+# shutil.move('C:\\bacon.txt', 'C:\\eggs\\new_bacon.txt')
 
+# #Note: Eğer taşımak istediğin klasör gerçekte yoksa o zaman taşıma olmaz ama 
+# #source un ismi değişir aşağıdaki için bacon > eggs olur
+# shutil.move('C:\\bacon.txt', 'C:\\eggs')
 
+#----------------------------------------------------------------------------------------
+# #path i kalıcı olarak silmek
+# import os
+# os.unlink(path)
+# 
+# #path deki dosyayı silme
+# os.rmdir(path)
+# 
+# #path deki dosyayı ve uzantılarını silme(klasörü silme)
+# shutil.rmtree(path)
 
+# #örnek program .rxt ile biten dosyaları silecek(önlem olarak 456 ya comment koydum)
+# import os
+# for filename in os.listdir():
+#     if filename.endswith('.rxt'):
+#         #os.unlink(filename)
+#         print(filename)
+
+#----------------------------------------------------------------------------------------
+# #You can install this module by running pip install send2trash from a Terminal window.
+# #güvenli dosya silmek için kullanılır.Daha sonra geri dönüşüm kutusundan geri getirebilirsin
+# import send2trash
+# baconFile = open('bacon.txt', 'a') # creates the file
+# baconFile.write('Bacon is not a vegetable.')
+# baconFile.close()
+# send2trash.send2trash('bacon.txt')
+
+#----------------------------------------------------------------------------------------
+# örnek program; dosya adındaki amerikan style tarihi avrupa style a çevirme (MM-DD-YYYY>>DD-MM-YYYY)
+# gün için belirtilen (0|1)?\d)>> tarih belirtirken 01,1,10 gibi 3 farklı şekilde yazılan
+# gün tipini kabul etmek için
+# ay için belirtilen (0|1|2|3)?\d)>> 01,2,31 gibi 3 farklı şekilde yazılan
+# ay tipini kabul etmek için
+# yıl için belirtilen (19|20)\d\d)>> 1991,2000 gibi 20 ve 21. yüzyıl ifadeleri için
+# yıl tipini kabul etmek için. yıl için 1777 gibi 20 ve21. yy dışında yıl girersen hata alırsın
+#Note: buradaki sorunlar 0-15-2000-02-31-2015 gibi yanlış tarihleri de doğru sayacaktır
+
+# import shutil, os, re
+# datePattern = re.compile(r"""^(.*?) ((0|1)?\d) - ((0|1|2|3)?\d) - ((19|20)\d\d) (.*?)$ """, re.VERBOSE)
+# 
+# for amerFilename in os.listdir('C:\\Users\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder'):
+#     mo = datePattern.search(amerFilename)
+#     
+# # Skip files without a date.
+#     if mo == None:
+#         continue
+# 
+# # Get the different parts of the filename.
+#     beforePart = mo.group(1)
+#     monthPart  = mo.group(2)
+#     dayPart    = mo.group(4)
+#     yearPart   = mo.group(6)
+#     afterPart  = mo.group(8)
+# 
+# # Form the European-style filename.
+#     euroFilename = beforePart + dayPart + '-' + monthPart + '-' + yearPart + afterPart
+# 
+# # Get the full, absolute file paths.
+#     absWorkingDir = os.path.abspath('C:\\Users\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder')
+#     amerFilename = os.path.join(absWorkingDir, amerFilename)
+#     euroFilename = os.path.join(absWorkingDir, euroFilename)
+# 
+# # Rename the files.
+#     print('Renaming "%s" to "%s"...' % (amerFilename, euroFilename))
+#     shutil.move(amerFilename, euroFilename)   # uncomment after testing
+
+#----------------------------------------------------------------------------------------
+# #örnek program dosyanın içindeki metin içeriğini değiştirme
+# #Bir üstteki örnek programdan farkı 
+# #üstteki programda dosya adlarındaki tarihleri amerikan style dan europe style a çevirdi
+# #Bu programda text içindeki tarhileri amerikan style dan europe style a çevirdi
+# import shutil, os, re
+# UgurTextFile2 = open('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder\\date_test_2_31-05-2016.txt', 'w')
+# UgurTextFile = open('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder\\date_test31-05-2016.txt')
+# datePattern = re.compile(r"""^(.*?) ((0|1)?\d) - ((0|1|2|3)?\d) - ((19|20)\d\d) (.*?)$ """, re.VERBOSE)
+# for amerFilename in UgurTextFile:
+#     mo = datePattern.search(amerFilename)
+#     # Skip files without a date.    
+#     if mo == None:
+#         UgurTextFile2 = open('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder\\date_test_2_31-05-2016.txt', 'a')
+#         UgurTextFile2.write(amerFilename)
+#         continue
+#     
+#     # Get the different parts of the filename.
+#     beforePart = mo.group(1)
+#     monthPart  = mo.group(2)
+#     dayPart    = mo.group(4)
+#     yearPart   = mo.group(6)
+#     afterPart  = mo.group(8)
+#     
+#     # Form the European-style filename.
+#     euroFilename = beforePart + dayPart + '-' + monthPart + '-' + yearPart + afterPart
+#     
+#     UgurTextFile2 = open('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder\\date_test_2_31-05-2016.txt', 'a')
+#     UgurTextFile2.write(euroFilename + '\n')
+#     UgurTextFile2.close()
+    
+#----------------------------------------------------------------------------------------
+# #örnek program debug, raise exception ile şekil oluştururken koşula uymayan sayılarda hata verdirdik
+# def boxPrint(symbol, width, height):
+#     if len(symbol) != 1:
+#         raise Exception('Symbol must be a single character string.')
+#     if width <= 2:
+#         raise Exception('Width must be greater than 2.')
+#     if height <= 2:
+#         raise Exception('Height must be greater than 2.')
+#     print(symbol * width)
+#     for i in range(height - 2):
+#         print(symbol + (' ' * (width - 2)) + symbol)
+#     print(symbol * width)
+#     
+# for sym, w, h in (('*', 4, 4), ('O', 20, 5), ('x', 1, 3), ('ZZ', 3, 3)):
+#     try:
+#         boxPrint(sym, w, h)
+#     except Exception as err:
+#             print('An exception happened: ' + str(err))
+        
+#----------------------------------------------------------------------------------------
 
 
 

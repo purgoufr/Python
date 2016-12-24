@@ -1,0 +1,8 @@
+'''
+Created on 24 Ara 2016
+
+@author: Purgoufr
+'''
+
+import webbrowser
+webbrowser.open('http://inventwithpython.com/')

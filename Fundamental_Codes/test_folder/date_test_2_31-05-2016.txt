@@ -1,0 +1,28 @@
+From this chapter, you know the shutil.move() function can be used to rename files: 
+Its arguments are the name of the file to rename and the new filename. Because this
+ function exists in the shutil module, you must import that module ?.
+
+But before renaming the files, you need to identify which files you want to rename.
+ Filenames with dates such as spam5-4-1984.txt and 01-03-2014eggs.zip should be renamed, 
+while filenames without dates such as littlebrother.epub can be ignored.
+
+You can use a regular expression to identify this pattern. After importing the re module 
+at the top, call re.compile() to create a Regex object ?. Passing re.VERBOSE for the second 
+argument ? will allow whitespace and comments in the regex string to make it more readable.
+
+The regular expression string begins with ^(.*?) to match any text at the beginning of 
+the filename that might come before the date. The ((0|1)?\d) group matches the month.
+ The first digit can be either 0 or 1, so the regex matches 12 for December but also 
+02 for February.
+ This digit is also optional so that the month can be 04 or 4 for April. The group for 
+the day is ((0|1|2|3)?\d) and follows similar logic; 3, 03, and 31 are all valid numbers
+ for days. (Yes, this regex will accept some invalid dates such as 31-4-2014, 2-29-2013,
+ and 15-0-2014. 
+Dates have a lot of thorny special cases that can be easy to miss. But for simplicity, 
+the regex in this program works well enough.),
+
+
+
+
+25-09-2001
+25-05-2002
