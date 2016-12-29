@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pydev-testrun version="1.0"?><pydev-testsuite>
+<summary errors="1" failures="0" finished="true" name="Test Run: 1" tests="0" total_time="Finished in: 0.00 secs."/>
+<test location="C:/Users/Purgoufr/Documents/Eclipse Projects/Python/Excel_Documentation/Excel_Basic_Codes.py" status="error" test="Excel_Basic_Codes" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Purgoufr\Desktop\IDE\Eclipse_IDE\eclipse-cpp-neon-1a-win32-x86_64\eclipse\plugins\org.python.pydev_5.4.0.201611281236\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Excel_Documentation\Excel_Basic_Codes.py", line 9, in <module>
+    wb = openpyxl.load_workbook('example.xlsx')
+  File "C:\Python27\lib\openpyxl\reader\excel.py", line 152, in load_workbook
+    archive = _validate_archive(filename)
+  File "C:\Python27\lib\openpyxl\reader\excel.py", line 115, in _validate_archive
+    archive = ZipFile(filename, 'r', ZIP_DEFLATED)
+  File "C:\Python27\lib\zipfile.py", line 756, in __init__
+    self.fp = open(file, modeDict[mode])
+IOError: [Errno 2] No such file or directory: 'example.xlsx'
+ERROR: Module: Excel_Basic_Codes could not be imported (file: C:/Users/Purgoufr/Documents/Eclipse Projects/Python/Excel_Documentation/Excel_Basic_Codes.py).
+]]></stderr>
+</test>
+<launch mode="run">
+<launch_memento><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration local="true" path="Excel_Documentation Excel_Documentation"/>
+]]></launch_memento>
+</launch>
+</pydev-testsuite>

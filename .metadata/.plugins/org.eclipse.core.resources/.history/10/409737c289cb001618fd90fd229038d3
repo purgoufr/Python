@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 26 Ara 2016
+
+@author: Purgoufr
+'''
+
+import openpyxl
+wb = openpyxl.load_workbook('example.xlsx.csv')
+print(wb.get_sheet_names())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,18 +1,21 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\Purgoufr\Documents\Eclipse Projects\Python\.metadata\.plugins\org.eclipse.core.resources\.projects\Web_Scraping\com.python.pydev.analysis\v2_indexcache
-web_basic_codes|1482615049753720000|C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Web_Scraping\web_basic_codes.py
+web_basic_codes|1482768636936060000|C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Web_Scraping\web_basic_codes.py
+Download_picture_from_website|1482753889361640000|C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Web_Scraping\Download_picture_from_website.py
 -- END DISKCACHE
 -- START DICTIONARY
 1
-1=web_basic_codes
+1=Download_picture_from_website
 -- END DICTIONARY
 -- START TREE 1
-4
-ele|1|elems!11@
-exa|2|exampleFile!11@exampleSoup!11@
-nos|1|noStarchSoup!11@
+6
+com|2|comicUrl!11@comicElem!11@
+ima|1|imageFile!11@
+pre|1|prevLink!11@
 res|1|res!11@
+sou|1|soup!11@
+url|1|url!11@
 -- END TREE
 -- START TREE 2
 0

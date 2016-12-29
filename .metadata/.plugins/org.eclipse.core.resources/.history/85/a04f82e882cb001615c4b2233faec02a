@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 26 Ara 2016
+
+@author: Purgoufr
+'''
+
+from openpyxl.reader.excel import load_workbook
+wb = load_workbook('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Excel_Documentation\\example.xlsx')
+wb.get_sheet_names()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

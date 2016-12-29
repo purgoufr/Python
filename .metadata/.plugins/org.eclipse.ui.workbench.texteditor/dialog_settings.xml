@@ -2,22 +2,29 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="bacon" key="selection"/>
+		<item value="Anchorage" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="bacon"/>
-			<item value="içer"/>
-			<item value="yazma"/>
-			<item value="app"/>
-			<item value="yer"/>
-			<item value="for i"/>
-			<item value="değiştirme"/>
-			<item value="değiştir"/>
+			<item value="Anchorage"/>
+			<item value="Autauga"/>
+			<item value="census"/>
+			<item value="ö"/>
+			<item value="ç"/>
+			<item value="ş"/>
+			<item value="ü"/>
+			<item value="ğ"/>
 		</list>
 		<list key="replacehistory">
+			<item value="o"/>
+			<item value="c"/>
+			<item value="s"/>
+			<item value="u"/>
+			<item value="g"/>
+			<item value="i"/>
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

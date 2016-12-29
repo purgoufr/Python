@@ -1,0 +1,71 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 29 Ara 2016
+
+@author: Purgoufr
+'''
+
+# #PDF dosyasının toplam sayfa sayısı
+# import PyPDF2
+# pdfFileObj = open('meetingminutes.pdf', 'rb')
+# pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+# print(pdfReader.numPages)
+# 
+# #sayfa içeriğini getirme
+# pageObj = pdfReader.getPage(1)
+# print(pageObj.extractText())
+
+#----------------------------------------------------------------------------------------
+# #PDF şifreli mi değil mi?
+# import PyPDF2
+# pdfReader = PyPDF2.PdfFileReader(open('encrypted.pdf', 'rb'))
+# print(pdfReader.isEncrypted)
+# 
+# #PDF şifresini yaz
+# print(pdfReader.decrypt('rosebud'))
+# #numarası yazılan sayfayı getir
+# pageObj = pdfReader.getPage(0)
+# print(pageObj.extractText())
+
+#----------------------------------------------------------------------------------------
+# #PDF oluşturma-birden çok pdf i açıp içindekileri kopyalayıp yeni pdf oluşturabiliriz.
+# #Burada iki tane pdf dosyası açtık ve ikisini yeni oluşturduğumuz tek bir PDF de birleştirdik
+# 
+# import PyPDF2
+# pdf1File = open('meetingminutes.pdf', 'rb')
+# pdf2File = open('meetingminutes2.pdf', 'rb')
+# pdf1Reader = PyPDF2.PdfFileReader(pdf1File)
+# pdf2Reader = PyPDF2.PdfFileReader(pdf2File)
+# pdfWriter = PyPDF2.PdfFileWriter()
+# 
+# for pageNum in range(pdf1Reader.numPages):
+#     pageObj = pdf1Reader.getPage(pageNum)
+#     pdfWriter.addPage(pageObj)
+# 
+# for pageNum in range(pdf2Reader.numPages):
+#     pageObj = pdf2Reader.getPage(pageNum)
+#     pdfWriter.addPage(pageObj)
+# 
+# pdfOutputFile = open('combinedminutes.pdf', 'wb')
+# pdfWriter.write(pdfOutputFile)
+# pdfOutputFile.close()
+# pdf1File.close()
+# pdf2File.close()
+
+#----------------------------------------------------------------------------------------
+#PDF sayfa yönü değiştirme(rotate)
+import PyPDF2
+minutesFile = open('meetingminutes.pdf', 'rb')
+pdfReader = PyPDF2.PdfFileReader(minutesFile)
+page = pdfReader.getPage(0)
+page.rotateClockwise(90)
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pydev-testrun version="1.0"?><pydev-testsuite>
+<summary errors="1" failures="0" finished="true" name="Test Run: 4" tests="0" total_time="Finished in: 0.00 secs."/>
+<test location="C:/Users/Purgoufr/Documents/Eclipse Projects/Python/PDF_Documentation/pdf_basic_codes.py" status="error" test="pdf_basic_codes" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Purgoufr\Desktop\IDE\Eclipse_IDE\eclipse-cpp-neon-1a-win32-x86_64\eclipse\plugins\org.python.pydev_5.4.0.201611281236\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\Purgoufr\Documents\Eclipse Projects\Python\PDF_Documentation\pdf_basic_codes.py", line 130, in <module>
+    import docx
+  File "C:\Python27\lib\docx\__init__.py", line 3, in <module>
+    from docx.api import Document  # noqa
+  File "C:\Python27\lib\docx\api.py", line 14, in <module>
+    from docx.package import Package
+  File "C:\Python27\lib\docx\package.py", line 11, in <module>
+    from docx.opc.package import OpcPackage
+  File "C:\Python27\lib\docx\opc\package.py", line 12, in <module>
+    from .part import PartFactory
+  File "C:\Python27\lib\docx\opc\part.py", line 12, in <module>
+    from .oxml import serialize_part_xml
+  File "C:\Python27\lib\docx\opc\oxml.py", line 12, in <module>
+    from lxml import etree
+ImportError: No module named lxml
+ERROR: Module: pdf_basic_codes could not be imported (file: C:/Users/Purgoufr/Documents/Eclipse Projects/Python/PDF_Documentation/pdf_basic_codes.py).
+]]></stderr>
+</test>
+<launch mode="run">
+<launch_memento><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration local="true" path="PDF_Documentation PDF_Documentation"/>
+]]></launch_memento>
+</launch>
+</pydev-testsuite>

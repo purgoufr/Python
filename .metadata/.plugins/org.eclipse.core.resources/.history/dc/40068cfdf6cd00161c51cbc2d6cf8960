@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 29 Ara 2016
+
+@author: Purgoufr
+'''
+
+#PDF dosyasının toplam sayfa sayısı
+import PyPDF2
+pdfFileObj = open('meetingminutes.pdf', 'rb')
+pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+print(pdfReader.numPages)
+
+pageObj = pdfReader.getPage(0)
+pageObj.extractText()
