@@ -5,18 +5,18 @@ Created on 18 Ara 2016
 @author: Purgoufr
 '''
 #----------------------------------------------------------------------------------------
-##dizideki değerleri göster
+##dizideki degerleri goster
 # spam = {'color': 'red', 'age': 42}
 # for v in spam.values():
 #     print(v)
 #     print('\n')
 # 
-# #dizideki keyleri(kategorileri) göster    
+# #dizideki keyleri(kategorileri) goster    
 # for k in spam.keys():
 #     print(k)
 #     print('\n')
 #  
-##dizideki itemleri sınıflandırarak göster    
+##dizideki itemleri siniflandirarak goster    
 # for i in spam.items():
 #     print(i)
 #     print('\n')
@@ -27,20 +27,20 @@ Created on 18 Ara 2016
 
 #----------------------------------------------------------------------------------------
 # 
-# #Komut satırına 1 ve 2 yi yazarsan ekranda screen satırını görürsün 
-# #1picnicItems = {'apples': 5, 'cups': 2}
-# #2'I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.'
-# #screen=>'I am bringing 2 cups.'
+# #Komut satirina 1 ve 2 yi yazarsan ekranda screen satirini gorürsün 
+# #1picnicitems = {'apples': 5, 'cups': 2}
+# #2'i am bringing ' + str(picnicitems.get('cups', 0)) + ' cups.'
+# #screen=>'i am bringing 2 cups.'
 # 
 # spamTwo = {'name': 'Pooka', 'age': 5}
-# spamTwo.setdefault('color', 'black')    #setdefault değişkenin içine bakar color yoksa değişkende kendisi atar varsa değiştirmez
-# spamTwo.setdefault('color', 'white')    #değer bir kere set edilirse bir dahakine değişmez o yüzden color black olarak kalır white olmaz
+# spamTwo.setdefault('color', 'black')    #setdefault degiskenin icine bakar color yoksa degiskende kendisi atar varsa degistirmez
+# spamTwo.setdefault('color', 'white')    #deger bir kere set edilirse bir dahakine degismez o yüzden color black olarak kalir white olmaz
 # print(spamTwo)
 # print('\n')
 
 #----------------------------------------------------------------------------------------
-# #yazıdaki harflerin kaç kere kullanıldığını göster
-# message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+# #yazidaki harflerin kac kere kullanildigini goster
+# message = 'it was a bright cold day in April, and the clocks were striking thirteen.'
 # count = {}
 # 
 # for character in message:
@@ -50,9 +50,9 @@ Created on 18 Ara 2016
 # print(count)
 
 #----------------------------------------------------------------------------------------
-#pprint ; print formatını değiştirir printlenen şeyleri düzgün gösterir(alt alta gösterir)
+#pprint ; print formatini degistirir printlenen seyleri düzgün gosterir(alt alta gosterir)
 # import pprint
-# messageTwo = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+# messageTwo = 'it was a bright cold day in April, and the clocks were striking thirteen.'
 # count = {}
 # 
 # for character in messageTwo:
@@ -62,7 +62,7 @@ Created on 18 Ara 2016
 # pprint.pprint(count)
 
 #----------------------------------------------------------------------------------------
-# # dizideki elemanlardan aynı isme sahip üylerinin değerlerini toplar.Örneğin apples Alice te 5 tane Bob da 2 tane var toplam 7
+# # dizideki elemanlardan ayni isme sahip üylerinin degerlerini toplar.ornegin apples Alice te 5 tane Bob da 2 tane var toplam 7
 # allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
 # 'Bob': {'ham sandwiches': 3, 'apples': 2},
 # 'Carol': {'cups': 3, 'apple pies': 1}}
@@ -81,7 +81,7 @@ Created on 18 Ara 2016
 # print(' - Apple Pies     ' + str(totalBrought(allGuests, 'apple pies')))
 
 #----------------------------------------------------------------------------------------
-# #Çok satırlı dizeleri kullanmak için çift tırnak kullanılır
+# #cok satirli dizeleri kullanmak icin cift tirnak kullanilir
 # print('''Dear Alice,
 # 
 # Eve's cat has been arrested for catnapping, cat burglary, and extortion.
@@ -91,10 +91,10 @@ Created on 18 Ara 2016
 #
 #print('Dear Alice,\n\nEve\'s cat has been arrested for catnapping, cat burglary, and extortion.\n\nSincerely,\nBob')
 
-##ikiside aynı işi görür
+##ikiside ayni isi gorür
 
 #----------------------------------------------------------------------------------------
-#baştan sondan tek veya daha çok eleman getirme
+#bastan sondan tek veya daha cok eleman getirme
 # spam = 'Hello world!'
 # print(spam[0])
 # print(spam[4])
@@ -104,45 +104,45 @@ Created on 18 Ara 2016
 # print(spam[6:])
 
 #----------------------------------------------------------------------------------------
-# #string in karakterlerini büyük harf ya da küçük harf yapma
+# #string in karakterlerini büyük harf ya da kücük harf yapma
 # spam = 'Hello world!'
 # print(spam.upper())
 # print(spam.lower())
 
 #----------------------------------------------------------------------------------------
-# #input isteme- input girişi
+# #input isteme- input girisi
 # print('How are you?')
 # feeling = input()
 # if feeling.lower() == 'great':
-#     print('I feel great too.')
+#     print('i feel great too.')
 # else:
-#     print('I hope the rest of your day is good.')
+#     print('i hope the rest of your day is good.')
 
 #----------------------------------------------------------------------------------------
-# #string deki yazının karakterlerinin tamamı küçük mü büyük mü kontrol eder
+# #string deki yazinin karakterlerinin tamami kücük mü büyük mü kontrol eder
 # spam = 'Hello world!'
-# 
+#  
 # print(spam.islower())
-# 
+#  
 # print(spam.isupper())
-# 
+#  
 # print('HELLO'.isupper())
-# 
+#  
 # print('abc12345'.islower())
-# 
+#  
 # print('12345'.islower())
-# 
+#  
 # print('12345'.isupper())
 
 #----------------------------------------------------------------------------------------
-# #örnek uygulama input alma hepsi sayı mı hepsi karaktermi kontrol etme
-# while True:
+# #ornek uygulama input alma hepsi sayi mi hepsi karaktermi kontrol etme
 #     print('Enter your age:')
 #     age = input()
 #     if age.isdecimal():
 #         break
 #     print('Please enter a number for your age.')
-# 
+
+#  
 # while True:
 #     print('Select a new password (letters and numbers only):')
 #     password = input()
@@ -151,7 +151,8 @@ Created on 18 Ara 2016
 #     print('Passwords can only have letters and numbers.')
 
 #----------------------------------------------------------------------------------------
-##başlangıçta ve sonda(cümlenin başlangıcında ve sonunda) kelimeleri kontrol etmek için kullanılır
+
+##baslangicta ve sonda(cümlenin baslangicinda ve sonunda) kelimeleri kontrol etmek icin kullanilir
 # print('Hello world!'.startswith('Hello'))
 # 
 # print('Hello world!'.endswith('world!'))
@@ -165,7 +166,7 @@ Created on 18 Ara 2016
 # print('Hello world!'.endswith('Hello world!'))
 
 #----------------------------------------------------------------------------------------
-##dizinin elemanlarına virgülden sonra tırnak içinde yazdığın şeyleri ekler
+##dizinin elemanlarina virgülden sonra tirnak icinde yazdigin seyleri ekler
 # print(', '.join(['cats', 'rats', 'bats']) )
 # 
 # print(' '.join(['My', 'name', 'is', 'Simon']))
@@ -173,13 +174,13 @@ Created on 18 Ara 2016
 # print('ABC'.join(['My', 'name', 'is', 'Simon']))
 
 #----------------------------------------------------------------------------------------
-##join'in tam tersi string i parçalara böler
+##join'in tam tersi string i parcalara boler
 # print('My name is Simon'.split())
 # print('MyABCnameABCisABCSimon'.split('ABC'))
 # print('My name is Simon'.split('m'))
 
 # spam = '''Dear Alice,
-# How have you been? I am fine.
+# How have you been? i am fine.
 # There is a container in the fridge
 # that is labeled "Milk Experiment".
 # 
@@ -189,7 +190,7 @@ Created on 18 Ara 2016
 # print(spam.split('\n'))
 
 #----------------------------------------------------------------------------------------
-# #string in önüne veya arkasına boşluk koymak için kullanılır
+# #string in onüne veya arkasina bosluk koymak icin kullanilir
 # print('Hello'.rjust(10))
 # 
 # print('Hello'.rjust(20))
@@ -201,22 +202,22 @@ Created on 18 Ara 2016
 # print('Hello'.ljust(20, '-'))
 
 #----------------------------------------------------------------------------------------
-# #string in başına ve sonuna istediğin karakteri ekler
+# #string in basina ve sonuna istedigin karakteri ekler
 # print('Hello'.center(20))
 # print('Hello'.center(20, '='))
 
 #----------------------------------------------------------------------------------------
-# #örnek uygulama liste oluşturma 
+# #ornek uygulama liste olusturma 
 # def printPicnic(itemsDict, leftWidth, rightWidth):
-#     print('PICNIC ITEMS'.center(leftWidth + rightWidth, '-'))
+#     print('PiCNiC iTEMS'.center(leftWidth + rightWidth, '-'))
 #     for k, v in itemsDict.items():
 #         print(k.ljust(leftWidth, '.') + str(v).rjust(rightWidth))
-# picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
-# printPicnic(picnicItems, 12, 5)
-# printPicnic(picnicItems, 20, 6)
+# picnicitems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+# printPicnic(picnicitems, 12, 5)
+# printPicnic(picnicitems, 20, 6)
 
 #----------------------------------------------------------------------------------------
-# # string deki boşluğu silme sağdaki soldaki boşluğu silme kelime silme
+# # string deki boslugu silme sagdaki soldaki boslugu silme kelime silme
 # spam = '    Hello World     '
 # print(spam.strip())
 # print(spam.lstrip())
@@ -225,7 +226,7 @@ Created on 18 Ara 2016
 #print(spam.strip('ampS'))
 
 #----------------------------------------------------------------------------------------
-# Örnek program text içindeki yazıdan istenilen kısmı çekme bu örnekte telefon çektik
+# ornek program text icindeki yazidan istenilen kismi cekme bu ornekte telefon cektik
 # def isPhoneNumber(text):
 #     if len(text) != 12:
 #         return False
@@ -256,16 +257,16 @@ Created on 18 Ara 2016
 #         print('Done')
 
 #----------------------------------------------------------------------------------------
-# #kelimenin sağına, soluna veya her iki tarafına karakter ekleme
+# #kelimenin sagina, soluna veya her iki tarafina karakter ekleme
 # print('Hello'.rjust(20, '*'))
 # print('Hello'.ljust(20, '-'))
 #print('Hello'.center(20))
 #print('Hello'.center(20, '='))
 
 #----------------------------------------------------------------------------------------
-#Creating Regex Objects(regex objesiyle bir string in içerisinden istediğiniz grubu search yapabilirsin 
-# arayabilirsin filtreliyebilirsin seçebilirsin 
-#Örnek program da bir string oluşturduk ve içinden telefon numarası çektik ya da karşılaştırma yaptık
+#Creating Regex Objects(regex objesiyle bir string in icerisinden istediginiz grubu search yapabilirsin 
+# arayabilirsin filtreliyebilirsin secebilirsin 
+#ornek program da bir string olusturduk ve icinden telefon numarasi cektik ya da karsilastirma yaptik
 
 #import re   #import etmeyi unutma!!!
 # #'\d '  Any numeric digit from 0 to 9.
@@ -291,16 +292,16 @@ Created on 18 Ara 2016
 
 #import re 
 # heroRegex = re.compile (r'Batman|Tina Fey')
-# mo1 = heroRegex.search('Batman and Tina Fey.') #benzer kelimeleri seç burada sadece batman uyuyor
+# mo1 = heroRegex.search('Batman and Tina Fey.') #benzer kelimeleri sec burada sadece batman uyuyor
 # print(mo1.group())
-# mo2 = heroRegex.search('Tina Fey') #search ettiğin stringe tamamen bezer olması lazım örneğin FEY aratırsan hata verir
+# mo2 = heroRegex.search('Tina Fey') #search ettigin stringe tamamen bezer olmasi lazim ornegin FEY aratirsan hata verir
 # print(mo2.group())
 # mo3 = heroRegex.search('Tina FeyYY and Batman.')
 # print(mo3.group())
 
 #import re 
 # phoneNumRegexFour = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # has no groups
-# print(phoneNumRegexFour.findall('Cell: 415-555-9999 Work: 212-555-0000')) #arama kalıbına uyanların hepsini getirir
+# print(phoneNumRegexFour.findall('Cell: 415-555-9999 Work: 212-555-0000')) #arama kalibina uyanlarin hepsini getirir
 #
 #import re  
 # phoneNumRegexFive = re.compile(r'(\d\d\d)-(\d\d\d)-(\d\d\d\d)') # has groups
@@ -308,22 +309,22 @@ Created on 18 Ara 2016
 
 # #sessiz harfleri getir
 # import re 
-# consonantRegex = re.compile(r'[^aeiouAEIOU]')
+# consonantRegex = re.compile(r'[^aeiouAEiOU]')
 # print(consonantRegex.findall('Robocop eats baby food. BABY FOOD.'))
 
-##istediğin harflerle biten kelimeleri getirir
+##istedigin harflerle biten kelimeleri getirir
 # import re 
 # atRegex = re.compile(r'.at')
 # print(atRegex.findall('The cat in the hat sat on the flat mat.'))
 
-# #istediğin kelimeleri getirir
+# #istedigin kelimeleri getirir
 # import re 
 # nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)')
 # mo = nameRegex.search('First Name: Al Last Name: Sweigart')
 # print(mo.group(1))
 # print(mo.group(2))
 
-# #belirlediğin simgelerin arasında kalan kelimeleri herşeyi getirir
+# #belirledigin simgelerin arasinda kalan kelimeleri herseyi getirir
 # import re 
 # nongreedyRegex = re.compile(r'<.*?>')
 # mo = nongreedyRegex.search('<To serve man> for dinner.>')
@@ -337,47 +338,47 @@ Created on 18 Ara 2016
 # newlineRegexTwo = re.compile('.*', re.DOTALL)
 # print(newlineRegexTwo.search('Serve the public trust.\nProtect the innocent.\nUphold the law.').group())
 
-# #istediğin kelimeyi büyük küçük harf gözetmeksizin getirir
+# #istedigin kelimeyi büyük kücük harf gozetmeksizin getirir
 # import re 
-# robocop = re.compile(r'robocop', re.I)
+# robocop = re.compile(r'robocop', re.i)
 # print(robocop.search('Robocop is part man, part machine, all cop.').group())
 # print(robocop.search('Al, why does your programming book talk about robocop so much?.').group())
 
-# #istediğin kelimeyi seçeceğin kelime ile yer değiştirme
+# #istedigin kelimeyi sececegin kelime ile yer degistirme
 # import re 
 # namesRegex = re.compile(r'Agent \w+')
 # print(namesRegex.sub('CENSORED', 'Agent Alice gave the secret documents to Agent Bob.'))
 
-# #istediğin kelimeyi istediğin yerden sonra istediğin karakterle değiştirme
+# #istedigin kelimeyi istedigin yerden sonra istedigin karakterle degistirme
 # import re 
 # agentNamesRegex = re.compile(r'Agent (\w)\w*')
 # print(agentNamesRegex.sub(r'\1****', 'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.'))
 
 #----------------------------------------------------------------------------------------
-# #path göstermek için kullanılır. Gerçekte oluşturmuyoruz sadece path gösterdik
+# #path gostermek icin kullanilir. Gercekte olusturmuyoruz sadece path gosterdik
 # import os
 # 
 # myFiles = ['A.txt', 'B.csv', 'C.docx']
 # for filename in myFiles:
 #     print(os.path.join('C:\\Users\\Purgoufr', filename))
   
-# #workspace ini (çalıştığın dosyanın konumunu)  otomatik getirir     
+# #workspace ini (calistigin dosyanin konumunu)  otomatik getirir     
 # import os
 # print(os.getcwd())
 
-# #çalıştığın dosyanın konumunu(path) değiştirir
+# #calistigin dosyanin konumunu(path) degistirir
 # import os
 # os.chdir('C:\\Windows\\System32')
 
-# #Yeni dosya oluşturma
+# #Yeni dosya olusturma
 # import os
 # os.makedirs('C:\\Users\\Purgoufr\\Desktop\\test_file')
 
-# #çalıştığın dosya path ini bulur
+# #calistigin dosya path ini bulur
 # import os
 # print(os.path.abspath('.'))
 
-# #path belirttiğin uygulamanın .exe ve dosya konumunu ayrı ayrı getirir
+# #path belirttigin uygulamanin .exe ve dosya konumunu ayri ayri getirir
 # import os
 # path = 'C:\\Windows\\System32\\calc.exe'
 # print(os.path.basename(path))
@@ -387,26 +388,26 @@ Created on 18 Ara 2016
 #print(os.path.split(calcFilePath))
 #print(calcFilePath.split(os.path.sep))
 
-##uygulamanın size (boyutunu) getirme -- byte olarak
+##uygulamanin size (boyutunu) getirme -- byte olarak
 # import os
 # print(os.path.getsize('C:\\Windows\\System32\\calc.exe'))
 
-# #dosyanın içindeki dosyaları listeler getirir
+# #dosyanin icindeki dosyalari listeler getirir
 # import os
 # print(os.listdir('C:\\Users\\Purgoufr\\Desktop'))
 
-# # Doğrulama işlemleri dosya mıdır? gibi
+# # Dogrulama islemleri dosya midir? gibi
 # import os
 # print(os.path.isdir('C:\\Windows\\System32\\calc.exe'))
 # print(os.path.isfile('C:\\Windows\\System32\\calc.exe'))
 
 #----------------------------------------------------------------------------------------
-# # Var olan dosya içeriğini açma dosya açma
+# # Var olan dosya icerigini acma dosya acma
 # helloFile = open('C:\\Users\\Purgoufr\\Desktop\\hello.txt')
 # helloContent = helloFile.read()
 # print(helloContent)
 
-# #Örnek program dosya oluşturma, oluşturulan dosyaya yazı yazma, dosyayı getirme 
+# #ornek program dosya olusturma, olusturulan dosyaya yazi yazma, dosyayi getirme 
 # UgurTextFile = open('ugur_text.txt', 'w')
 # UgurTextFile.write('Hello world!\n')
 # UgurTextFile.close()
@@ -420,38 +421,38 @@ Created on 18 Ara 2016
 
 #----------------------------------------------------------------------------------------
 # #copy paste yapma(copy file, destination file(paste) (source,destination) 
-# #Bu dosyalar varolmadığı için hata verecek gerçekte varolan dosyalarda denersen çalıştığını göreceksin
+# #Bu dosyalar varolmadigi icin hata verecek gercekte varolan dosyalarda denersen calistigini goreceksin
 # import shutil, os
 # os.chdir('C:\\')
 # shutil.copy('C:\\spam.txt', 'C:\\delicious')
-# #eggs.txt dosyasını kopyaladı fakat ismini değiştirerek yapıştırdı eggs2.txt olarak
+# #eggs.txt dosyasini kopyaladi fakat ismini degistirerek yapistirdi eggs2.txt olarak
 # shutil.copy('eggs.txt', 'C:\\delicious\\eggs2.txt')
-# #sadece tek bir dosya degil ('.txt' gibi değil klasör olarak) dosyanın alt dosyalarını da kopyalamak için
+# #sadece tek bir dosya degil ('.txt' gibi degil klasor olarak) dosyanin alt dosyalarini da kopyalamak icin
 # shutil.copytree('C:\\bacon', 'C:\\bacon_backup')
 
-# #dosya taşımak için(yer değiştirmek)(source,destination) dosya isim değiştirmek için
+# #dosya tasimak icin(yer degistirmek)(source,destination) dosya isim degistirmek icin
 # import shutil
 # shutil.move('C:\\bacon.txt', 'C:\\eggs')
 
-# #Hem yer değiştirip hem de yeni isim vermek için
+# #Hem yer degistirip hem de yeni isim vermek icin
 # shutil.move('C:\\bacon.txt', 'C:\\eggs\\new_bacon.txt')
 
-# #Note: Eğer taşımak istediğin klasör gerçekte yoksa o zaman taşıma olmaz ama 
-# #source un ismi değişir aşağıdaki için bacon > eggs olur
+# #Note: Eger tasimak istedigin klasor gercekte yoksa o zaman tasima olmaz ama 
+# #source un ismi degisir asagidaki icin bacon > eggs olur
 # shutil.move('C:\\bacon.txt', 'C:\\eggs')
 
 #----------------------------------------------------------------------------------------
-# #path i kalıcı olarak silmek
+# #path i kalici olarak silmek
 # import os
 # os.unlink(path)
 # 
-# #path deki dosyayı silme
+# #path deki dosyayi silme
 # os.rmdir(path)
 # 
-# #path deki dosyayı ve uzantılarını silme(klasörü silme)
+# #path deki dosyayi ve uzantilarini silme(klasorü silme)
 # shutil.rmtree(path)
 
-# #örnek program .rxt ile biten dosyaları silecek(önlem olarak 456 ya comment koydum)
+# #ornek program .rxt ile biten dosyalari silecek(onlem olarak 456 ya comment koydum)
 # import os
 # for filename in os.listdir():
 #     if filename.endswith('.rxt'):
@@ -460,7 +461,7 @@ Created on 18 Ara 2016
 
 #----------------------------------------------------------------------------------------
 # #You can install this module by running pip install send2trash from a Terminal window.
-# #güvenli dosya silmek için kullanılır.Daha sonra geri dönüşüm kutusundan geri getirebilirsin
+# #güvenli dosya silmek icin kullanilir.Daha sonra geri donüsüm kutusundan geri getirebilirsin
 # import send2trash
 # baconFile = open('bacon.txt', 'a') # creates the file
 # baconFile.write('Bacon is not a vegetable.')
@@ -468,14 +469,14 @@ Created on 18 Ara 2016
 # send2trash.send2trash('bacon.txt')
 
 #----------------------------------------------------------------------------------------
-# örnek program; dosya adındaki amerikan style tarihi avrupa style a çevirme (MM-DD-YYYY>>DD-MM-YYYY)
-# gün için belirtilen (0|1)?\d)>> tarih belirtirken 01,1,10 gibi 3 farklı şekilde yazılan
-# gün tipini kabul etmek için
-# ay için belirtilen (0|1|2|3)?\d)>> 01,2,31 gibi 3 farklı şekilde yazılan
-# ay tipini kabul etmek için
-# yıl için belirtilen (19|20)\d\d)>> 1991,2000 gibi 20 ve 21. yüzyıl ifadeleri için
-# yıl tipini kabul etmek için. yıl için 1777 gibi 20 ve21. yy dışında yıl girersen hata alırsın
-#Note: buradaki sorunlar 0-15-2000-02-31-2015 gibi yanlış tarihleri de doğru sayacaktır
+# ornek program; dosya adindaki amerikan style tarihi avrupa style a cevirme (MM-DD-YYYY>>DD-MM-YYYY)
+# gün icin belirtilen (0|1)?\d)>> tarih belirtirken 01,1,10 gibi 3 farkli sekilde yazilan
+# gün tipini kabul etmek icin
+# ay icin belirtilen (0|1|2|3)?\d)>> 01,2,31 gibi 3 farkli sekilde yazilan
+# ay tipini kabul etmek icin
+# yil icin belirtilen (19|20)\d\d)>> 1991,2000 gibi 20 ve 21. yüzyil ifadeleri icin
+# yil tipini kabul etmek icin. yil icin 1777 gibi 20 ve21. yy disinda yil girersen hata alirsin
+#Note: buradaki sorunlar 0-15-2000-02-31-2015 gibi yanlis tarihleri de dogru sayacaktir
 
 # import shutil, os, re
 # datePattern = re.compile(r"""^(.*?) ((0|1)?\d) - ((0|1|2|3)?\d) - ((19|20)\d\d) (.*?)$ """, re.VERBOSE)
@@ -507,10 +508,10 @@ Created on 18 Ara 2016
 #     shutil.move(amerFilename, euroFilename)   # uncomment after testing
 
 #----------------------------------------------------------------------------------------
-# #örnek program dosyanın içindeki metin içeriğini değiştirme
-# #Bir üstteki örnek programdan farkı 
-# #üstteki programda dosya adlarındaki tarihleri amerikan style dan europe style a çevirdi
-# #Bu programda text içindeki tarhileri amerikan style dan europe style a çevirdi
+# #ornek program dosyanin icindeki metin icerigini degistirme
+# #Bir üstteki ornek programdan farki 
+# #üstteki programda dosya adlarindaki tarihleri amerikan style dan europe style a cevirdi
+# #Bu programda text icindeki tarhileri amerikan style dan europe style a cevirdi
 # import shutil, os, re
 # UgurTextFile2 = open('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder\\date_test_2_31-05-2016.txt', 'w')
 # UgurTextFile = open('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder\\date_test31-05-2016.txt')
@@ -538,7 +539,7 @@ Created on 18 Ara 2016
 #     UgurTextFile2.close()
     
 #----------------------------------------------------------------------------------------
-# #örnek program debug, raise exception ile şekil oluştururken koşula uymayan sayılarda hata verdirdik
+# #ornek program debug, raise exception ile sekil olustururken kosula uymayan sayilarda hata verdirdik
 # def boxPrint(symbol, width, height):
 #     if len(symbol) != 1:
 #         raise Exception('Symbol must be a single character string.')
@@ -558,9 +559,47 @@ Created on 18 Ara 2016
 #             print('An exception happened: ' + str(err))
         
 #----------------------------------------------------------------------------------------
+# #Stdin'den bir satirlik bir girisi oku ve bir degiskene(s) kaydet. Sonra stdout icerigini yazdirin.
+# def read():
+#     s = 'How many chickens does it take to cross the road?'
+#     return s
+# 
+# if __name__ == '__main__':
+#     my_str = read()
+#     print(my_str)
 
+#----------------------------------------------------------------------------------------
+# # #input girme ve onu yazdirma
+# s = raw_input()
+# print (s)
+#   
+# def read():
+#     s = ''
+#     return s
+#   
+# if __name__ == '__main__':
+#     my_str = read()
+#     print(my_str)       
 
+#----------------------------------------------------------------------------------------
+# #toplama cikarma carpma
+# if __name__ == '__main__':
+#     a = int(input())
+#     b = int(input())
+#      
+#     total = a+b
+#     dif = a-b
+#     product = a*b
+#     
+#     print('sum of numbers = ', total , '\n' , 'difference = ' , dif , '\n' , 'product = ' , product)
+#                 
+# 
+# #bolme
+# # floating point division
+# print 4 / float(3)
+# 
+# # integer division  
+# print 4 // 3
 
-
-
+#----------------------------------------------------------------------------------------
 
