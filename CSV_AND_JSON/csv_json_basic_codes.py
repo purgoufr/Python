@@ -5,7 +5,7 @@ Created on 2 Oca 2017
 @author: Purgoufr
 '''
 #NOT: PYTHON 3 KULLAN!!!!!!!!!
-#CSV File Özellikleri
+#CSV File ozellikleri
 # CSV files are simple, lacking many of the features of an Excel spreadsheet. For example, CSV files
 # 
 # Don’t have types for their values—everything is a string
@@ -21,7 +21,7 @@ Created on 2 Oca 2017
 # Can’t have images or charts embedded in them
 
 #----------------------------------------------------------------------------------------
-# #CSV dosyası açma , CSV data çekme(tablodan data çekme)
+# #CSV dosyasi acma , CSV data cekme(tablodan data cekme)
 # import csv
 # exampleFile = open('example.csv')
 # exampleReader = csv.reader(exampleFile)
@@ -30,7 +30,7 @@ Created on 2 Oca 2017
 # print(exampleData[0][0])
 
 #----------------------------------------------------------------------------------------
-# #CSV dosyasını düzenli bir şekilde getirme(for loop kullanarak)
+# #CSV dosyasini duzenli bir sekilde getirme(for loop kullanarak)
 # import csv
 # exampleFile = open('example.csv')
 # exampleReader = csv.reader(exampleFile)
@@ -48,7 +48,7 @@ Created on 2 Oca 2017
 # outputFile.close()
 
 #----------------------------------------------------------------------------------------
-# #Hücreleri virgül(comma) yerine sekme(tab) karakteriyle ayırmak  ve satırların çift aralıklarla olması
+# #Hucreleri virgul(comma) yerine sekme(tab) karakteriyle ayirmak  ve satirlarin cift araliklarla olmasi
 # import csv
 # csvFile = open('example.tsv', 'w', newline='')
 # csvWriter = csv.writer(csvFile, delimiter='\t', lineterminator='\n\n')
@@ -58,7 +58,7 @@ Created on 2 Oca 2017
 # csvFile.close()
 
 #----------------------------------------------------------------------------------------
-# #birden fazla CSV dosyasının ilk satırını silme
+# #birden fazla CSV dosyasinin ilk satirini silme
 # import csv, os
 # os.makedirs('headerRemoved', exist_ok=True)
 # # Loop through every file in the current working directory.
@@ -91,22 +91,22 @@ Created on 2 Oca 2017
 #----------------------------------------------------------------------------------------
 #                            JSON 
 #----------------------------------------------------------------------------------------
-# #JSON verilerini içeren bir dizgeyi bir Python değerine çevirmek için onu json.loads() fonksiyonu kullandık
-# #string i JSON a çevirme 
-# stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
+# #JSON verilerini iceren bir dizgeyi bir Python degerine cevirmek icin onu json.loads() fonksiyonu kullandik
+# #string i JSON a cevirme 
+# stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineiQ": null}'
 # import json
 # jsonDataAsPythonValue = json.loads(stringOfJsonData)
 # print(jsonDataAsPythonValue)
 
 #----------------------------------------------------------------------------------------
-# #Python value yu JSON a çevirme
-# pythonValue = {'isCat': True, 'miceCaught': 0, 'name': 'Zophie','felineIQ': None}
+# #Python value yu JSON a cevirme
+# pythonValue = {'isCat': True, 'miceCaught': 0, 'name': 'Zophie','felineiQ': None}
 # import json
 # stringOfJsonData = json.dumps(pythonValue)
 # print(stringOfJsonData)
 
 #----------------------------------------------------------------------------------------
-# #Siteden hava durumu verisi çekme
+# #Siteden hava durumu verisi cekme
 # 
 # # Overall, the program does the following:
 # # 
@@ -130,7 +130,7 @@ Created on 2 Oca 2017
 #     sys.exit()
 # location = ' '.join(sys.argv[1:])
 # 
-# # Download the JSON data from OpenWeatherMap.org's API.
+# # Download the JSON data from OpenWeatherMap.org's APi.
 # url ='http://api.openweathermap.org/data/2.5/weather?q=%s&appid=71c5acc8b7a96eece3a86c883bc423c1' % (location)
 # response = requests.get(url)
 # response.raise_for_status()

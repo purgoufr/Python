@@ -251,7 +251,7 @@ Created on 24 Ara 2016
 #browser.find_elements_by_tag_name(name)            #is matched by 'a' and 'A')
 
 
-#ATTRIBUTE OR METHOD                                #DESCRIPTION
+#ATTRiBUTE OR METHOD                                #DESCRiPTiON
 #tag_name                                           #The tag name, such as 'a' for an <a> element
 
 #get_attribute(name)                                #The value for the element’s name attribute
@@ -269,8 +269,8 @@ Created on 24 Ara 2016
 #location                                           #A dictionary with keys 'x' and 'y' for the position of the element in the page
 
 
-#ATTRIBUTES                                         #MEANINGS
-#Keys.DOWN, Keys.UP, Keys.LEFT, Keys.RIGHT          #The keyboard arrow keys
+#ATTRiBUTES                                         #MEANiNGS
+#Keys.DOWN, Keys.UP, Keys.LEFT, Keys.RiGHT          #The keyboard arrow keys
 
 #Keys.ENTER, Keys.RETURN                            #The ENTER and RETURN keys
 

@@ -4,28 +4,28 @@ Created on 26 Ara 2016
 
 @author: Purgoufr
 '''
-# #Excel dosyası açma
+# #Excel dosyasi acma
 # import openpyxl, os
 # print(os.getcwd())
 # wb = openpyxl.load_workbook('ugur_test_excel.xlsx')
 # print(type(wb))
 # 
-# #excel sayfaları(sheets) getirme
+# #excel sayfalari(sheets) getirme
 # print(wb.get_sheet_names())
 # 
-# #excel geçerli sayfayı seçme
+# #excel gecerli sayfayi secme
 # sheet = wb.get_sheet_by_name('Sheet3')
 # print(sheet)
 # 
-# #geçerli sayfanın adını getirme
+# #gecerli sayfanin adini getirme
 # print(sheet.title)
 # 
-# #aktif olan sayfayı getir
+# #aktif olan sayfayi getir
 # anotherSheet = wb.active
 # print(anotherSheet)
 
 #----------------------------------------------------------------------------------------
-# #excel de hücre(cell) değerlerini ayrı ayrı getirme
+# #excel de hucre(cell) degerlerini ayri ayri getirme
 # import openpyxl
 # wb = openpyxl.load_workbook('ugur_test_excel.xlsx')
 # sheet = wb.get_sheet_by_name('Sheet1')
@@ -39,7 +39,7 @@ Created on 26 Ara 2016
 # print('Cell ' + c.coordinate + ' is ' + c.value)
 # print(sheet['C1'].value)
 # 
-# #satır ve sütun getirme
+# #satir ve sutun getirme
 # print(sheet.cell(row=1, column=2))
 # print(sheet.cell(row=1, column=2).value)
 # 
@@ -48,7 +48,7 @@ Created on 26 Ara 2016
 
 #----------------------------------------------------------------------------------------
 
-# #maksimum kolon sayısı ve maksimum sutün sayısı
+# #maksimum kolon sayisi ve maksimum sutun sayisi
 # import openpyxl
 # wb = openpyxl.load_workbook('ugur_test_excel.xlsx')
 # sheet = wb.get_sheet_by_name('Sheet1')
@@ -57,7 +57,7 @@ Created on 26 Ara 2016
 
 #----------------------------------------------------------------------------------------
 
-# #sütun adlarını sayılara dönüştürme
+# #sutun adlarini sayilara donusturme
 # import openpyxl
 # from openpyxl.utils import get_column_letter,  column_index_from_string
 # print(get_column_letter(1))
@@ -77,7 +77,7 @@ Created on 26 Ara 2016
 # print(column_index_from_string('AA'))
 
 #----------------------------------------------------------------------------------------
-# #satır ve sütün getirme ayrıntılı şekilde
+# #satir ve sutun getirme ayrintili sekilde
 # import openpyxl
 # wb = openpyxl.load_workbook('ugur_test_excel.xlsx')
 # sheet = wb.get_sheet_by_name('Sheet1')
@@ -88,11 +88,11 @@ Created on 26 Ara 2016
 #     print('--- END OF ROW ---')
 
 #----------------------------------------------------------------------------------------
-# #örnek program excel veri okuma(nufus sayımı ile ilgili tabloda(censuspopdata)
-# #eyaletlerin ilçelerindeki sayım sayısı ve her sayımdaki nufusların toplamı
+# #ornek program excel veri okuma(nufus sayimi ile ilgili tabloda(censuspopdata)
+# #eyaletlerin ilcelerindeki sayim sayisi ve her sayimdaki nufuslarin toplami
 # #Verileri Excel elektronik tablosundan okuma
-# #Her ilçedeki nüfus sayım yerlerinin sayısını sayma
-# #Her ilçenin toplam nüfusunu sayma
+# #Her ilcedeki nufus sayim yerlerinin sayisini sayma
+# #Her ilcenin toplam nufusunu sayma
 # 
 # import openpyxl, pprint
 # print('Opening workbook...')
@@ -118,7 +118,7 @@ Created on 26 Ara 2016
 #     # Each row represents one census tract, so increment by one.
 #     countyData[state][county]['tracts'] += 1
 #     
-#     # Increase the county pop by the pop in this census tract.
+#     # increase the county pop by the pop in this census tract.
 #     countyData[state][county]['pop'] += int(pop)
 #     
 # # Open a new text file and write the contents of countyData to it.
@@ -128,7 +128,7 @@ Created on 26 Ara 2016
 # resultFile.close()
 # print('Done.')
 
-# #bir önceki örnekte oluşturulan tablodan veri alma
+# #bir onceki ornekte olusturulan tablodan veri alma
 # import os
 # os.chdir('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Excel_Documentation')
 # import census2010
@@ -138,7 +138,7 @@ Created on 26 Ara 2016
 # print('The 2010 population of Anchorage was ' + str(anchoragePop))
 
 #----------------------------------------------------------------------------------------
-# #excel dosyası oluşturma
+# #excel dosyasi olusturma
 # import openpyxl
 # wb = openpyxl.Workbook()
 # print(wb.get_sheet_names())
@@ -149,11 +149,11 @@ Created on 26 Ara 2016
 # sheet.title = 'Ugur Test Sheet'
 # print(wb.get_sheet_names())
 # 
-# #Yeni sheet(sayfa) oluşturma
+# #Yeni sheet(sayfa) olusturma
 # wb.create_sheet()
 # print(wb.get_sheet_names())
 # 
-# #Yeni oluşturulan sheet in(sayfanın) adını değiştirme(index=0 a oluşturduk yani ilk sheet(sayfa))
+# #Yeni olusturulan sheet in(sayfanin) adini degistirme(index=0 a olusturduk yani ilk sheet(sayfa))
 # wb.create_sheet(index=0, title='First Sheet')
 # print(wb.get_sheet_names())
 # 
@@ -164,32 +164,32 @@ Created on 26 Ara 2016
 # wb.remove_sheet(wb.get_sheet_by_name('Middle Sheet'))
 # print(wb.get_sheet_names())
 # 
-# #cell e (hücreye) yazı yazma
+# #cell e (hucreye) yazi yazma
 # sheet = wb.get_sheet_by_name('Sheet')
 # sheet['A1'] = 'Hello world!'
 # print(sheet['A1'].value)
 
 #----------------------------------------------------------------------------------------
-# #Var olan exceli güncelleme
+# #Var olan exceli guncelleme
 # import openpyxl
 # 
 # wb = openpyxl.load_workbook('update_example.xlsx')
 # sheet = wb.get_sheet_by_name('Sheet1')
 # 
 # # The produce types and their updated prices
-# PRICE_UPDATES = {'Garlic': 3.07,
+# PRiCE_UPDATES = {'Garlic': 3.07,
 #                  'Celery': 1.19,
 #                  'Lemon': 1.27}
 # # TODO: Loop through the rows and update the prices.
 # for rowNum in range(2, sheet.max_row):  # skip the first row
 #     produceName = sheet.cell(row=rowNum, column=1).value
-#     if produceName in PRICE_UPDATES:
-#         sheet.cell(row=rowNum, column=2).value = PRICE_UPDATES[produceName]
+#     if produceName in PRiCE_UPDATES:
+#         sheet.cell(row=rowNum, column=2).value = PRiCE_UPDATES[produceName]
 # 
 # wb.save('update_example.xlsx')
 
 #----------------------------------------------------------------------------------------
-# #excel dosya oluşturma, yazı ekleme, yazı font değiştirme
+# #excel dosya olusturma, yazi ekleme, yazi font degistirme
 # import openpyxl
 # 
 # from openpyxl.styles import Font
@@ -200,7 +200,7 @@ Created on 26 Ara 2016
 # sheet['A1'] = 'Hello world!'
 # wb.save('styles.xlsx')
 
-# #excel dosya oluşturma, yazı ekleme, yazı font değiştirme örnek 2
+# #excel dosya olusturma, yazi ekleme, yazi font degistirme ornek 2
 # import openpyxl
 # from openpyxl.styles import Font
 # wb = openpyxl.Workbook()
@@ -212,12 +212,12 @@ Created on 26 Ara 2016
 #  
 # fontObj2 = Font(size=24, italic=True)
 # sheet['B3'].font = fontObj2
-# sheet['B3'] = '24 pt Italic'
+# sheet['B3'] = '24 pt italic'
 #  
 # wb.save('styles.xlsx')
 
 #----------------------------------------------------------------------------------------
-# #formül yazma
+# #formul yazma
 # import openpyxl
 # wb = openpyxl.Workbook()
 # sheet = wb.active
@@ -227,7 +227,7 @@ Created on 26 Ara 2016
 # wb.save('styles.xlsx')
 
 #----------------------------------------------------------------------------------------
-# #excel hücreleri boyutlandırma
+# #excel hucreleri boyutlandirma
 # import openpyxl
 # wb = openpyxl.Workbook()
 # sheet = wb.active
@@ -238,7 +238,7 @@ Created on 26 Ara 2016
 # wb.save('styles.xlsx')
 
 #----------------------------------------------------------------------------------------
-# #hücreleri birleştirme 
+# #hucreleri birlestirme 
 # import openpyxl
 # wb = openpyxl.Workbook()
 # sheet = wb.active
@@ -248,7 +248,7 @@ Created on 26 Ara 2016
 # sheet['C5'] = 'Two merged cells.'
 # wb.save('styles.xlsx')
 
-# #hücreleri ayırma
+# #hucreleri ayirma
 # import openpyxl
 # wb = openpyxl.load_workbook('styles.xlsx')
 # sheet = wb.active
@@ -257,7 +257,7 @@ Created on 26 Ara 2016
 # wb.save('styles.xlsx')
 
 #----------------------------------------------------------------------------------------
-# #Satır ve sutun üst bilgileri dondurma ya da sabitleme
+# #Satir ve sutun ust bilgileri dondurma ya da sabitleme
 # import openpyxl
 # wb = openpyxl.load_workbook('update_example.xlsx')
 # sheet = wb.active
@@ -265,7 +265,7 @@ Created on 26 Ara 2016
 # wb.save('freezeExample.xlsx')
 
 #----------------------------------------------------------------------------------------
-# #grafik (chart) oluşturma hata veriyor ama çalıştırıyor
+# #grafik (chart) olusturma hata veriyor ama calistiriyor
 # import openpyxl
 # 
 # wb = openpyxl.Workbook()

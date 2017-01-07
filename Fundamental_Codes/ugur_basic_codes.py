@@ -27,14 +27,14 @@ Created on 18 Ara 2016
 
 #----------------------------------------------------------------------------------------
 # 
-# #Komut satirina 1 ve 2 yi yazarsan ekranda screen satirini gorürsün 
+# #Komut satirina 1 ve 2 yi yazarsan ekranda screen satirini gorursun 
 # #1picnicitems = {'apples': 5, 'cups': 2}
 # #2'i am bringing ' + str(picnicitems.get('cups', 0)) + ' cups.'
 # #screen=>'i am bringing 2 cups.'
 # 
 # spamTwo = {'name': 'Pooka', 'age': 5}
 # spamTwo.setdefault('color', 'black')    #setdefault degiskenin icine bakar color yoksa degiskende kendisi atar varsa degistirmez
-# spamTwo.setdefault('color', 'white')    #deger bir kere set edilirse bir dahakine degismez o yüzden color black olarak kalir white olmaz
+# spamTwo.setdefault('color', 'white')    #deger bir kere set edilirse bir dahakine degismez o yuzden color black olarak kalir white olmaz
 # print(spamTwo)
 # print('\n')
 
@@ -50,7 +50,7 @@ Created on 18 Ara 2016
 # print(count)
 
 #----------------------------------------------------------------------------------------
-#pprint ; print formatini degistirir printlenen seyleri düzgün gosterir(alt alta gosterir)
+#pprint ; print formatini degistirir printlenen seyleri duzgun gosterir(alt alta gosterir)
 # import pprint
 # messageTwo = 'it was a bright cold day in April, and the clocks were striking thirteen.'
 # count = {}
@@ -62,7 +62,7 @@ Created on 18 Ara 2016
 # pprint.pprint(count)
 
 #----------------------------------------------------------------------------------------
-# # dizideki elemanlardan ayni isme sahip üylerinin degerlerini toplar.ornegin apples Alice te 5 tane Bob da 2 tane var toplam 7
+# # dizideki elemanlardan ayni isme sahip uylerinin degerlerini toplar.ornegin apples Alice te 5 tane Bob da 2 tane var toplam 7
 # allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
 # 'Bob': {'ham sandwiches': 3, 'apples': 2},
 # 'Carol': {'cups': 3, 'apple pies': 1}}
@@ -91,7 +91,7 @@ Created on 18 Ara 2016
 #
 #print('Dear Alice,\n\nEve\'s cat has been arrested for catnapping, cat burglary, and extortion.\n\nSincerely,\nBob')
 
-##ikiside ayni isi gorür
+##ikiside ayni isi gorur
 
 #----------------------------------------------------------------------------------------
 #bastan sondan tek veya daha cok eleman getirme
@@ -104,7 +104,7 @@ Created on 18 Ara 2016
 # print(spam[6:])
 
 #----------------------------------------------------------------------------------------
-# #string in karakterlerini büyük harf ya da kücük harf yapma
+# #string in karakterlerini buyuk harf ya da kucuk harf yapma
 # spam = 'Hello world!'
 # print(spam.upper())
 # print(spam.lower())
@@ -119,7 +119,7 @@ Created on 18 Ara 2016
 #     print('i hope the rest of your day is good.')
 
 #----------------------------------------------------------------------------------------
-# #string deki yazinin karakterlerinin tamami kücük mü büyük mü kontrol eder
+# #string deki yazinin karakterlerinin tamami kucuk mu buyuk mu kontrol eder
 # spam = 'Hello world!'
 #  
 # print(spam.islower())
@@ -152,7 +152,7 @@ Created on 18 Ara 2016
 
 #----------------------------------------------------------------------------------------
 
-##baslangicta ve sonda(cümlenin baslangicinda ve sonunda) kelimeleri kontrol etmek icin kullanilir
+##baslangicta ve sonda(cumlenin baslangicinda ve sonunda) kelimeleri kontrol etmek icin kullanilir
 # print('Hello world!'.startswith('Hello'))
 # 
 # print('Hello world!'.endswith('world!'))
@@ -166,7 +166,7 @@ Created on 18 Ara 2016
 # print('Hello world!'.endswith('Hello world!'))
 
 #----------------------------------------------------------------------------------------
-##dizinin elemanlarina virgülden sonra tirnak icinde yazdigin seyleri ekler
+##dizinin elemanlarina virgulden sonra tirnak icinde yazdigin seyleri ekler
 # print(', '.join(['cats', 'rats', 'bats']) )
 # 
 # print(' '.join(['My', 'name', 'is', 'Simon']))
@@ -190,7 +190,7 @@ Created on 18 Ara 2016
 # print(spam.split('\n'))
 
 #----------------------------------------------------------------------------------------
-# #string in onüne veya arkasina bosluk koymak icin kullanilir
+# #string in onune veya arkasina bosluk koymak icin kullanilir
 # print('Hello'.rjust(10))
 # 
 # print('Hello'.rjust(20))
@@ -338,7 +338,7 @@ Created on 18 Ara 2016
 # newlineRegexTwo = re.compile('.*', re.DOTALL)
 # print(newlineRegexTwo.search('Serve the public trust.\nProtect the innocent.\nUphold the law.').group())
 
-# #istedigin kelimeyi büyük kücük harf gozetmeksizin getirir
+# #istedigin kelimeyi buyuk kucuk harf gozetmeksizin getirir
 # import re 
 # robocop = re.compile(r'robocop', re.i)
 # print(robocop.search('Robocop is part man, part machine, all cop.').group())
@@ -449,7 +449,7 @@ Created on 18 Ara 2016
 # #path deki dosyayi silme
 # os.rmdir(path)
 # 
-# #path deki dosyayi ve uzantilarini silme(klasorü silme)
+# #path deki dosyayi ve uzantilarini silme(klasoru silme)
 # shutil.rmtree(path)
 
 # #ornek program .rxt ile biten dosyalari silecek(onlem olarak 456 ya comment koydum)
@@ -461,7 +461,7 @@ Created on 18 Ara 2016
 
 #----------------------------------------------------------------------------------------
 # #You can install this module by running pip install send2trash from a Terminal window.
-# #güvenli dosya silmek icin kullanilir.Daha sonra geri donüsüm kutusundan geri getirebilirsin
+# #guvenli dosya silmek icin kullanilir.Daha sonra geri donusum kutusundan geri getirebilirsin
 # import send2trash
 # baconFile = open('bacon.txt', 'a') # creates the file
 # baconFile.write('Bacon is not a vegetable.')
@@ -470,11 +470,11 @@ Created on 18 Ara 2016
 
 #----------------------------------------------------------------------------------------
 # ornek program; dosya adindaki amerikan style tarihi avrupa style a cevirme (MM-DD-YYYY>>DD-MM-YYYY)
-# gün icin belirtilen (0|1)?\d)>> tarih belirtirken 01,1,10 gibi 3 farkli sekilde yazilan
-# gün tipini kabul etmek icin
+# gun icin belirtilen (0|1)?\d)>> tarih belirtirken 01,1,10 gibi 3 farkli sekilde yazilan
+# gun tipini kabul etmek icin
 # ay icin belirtilen (0|1|2|3)?\d)>> 01,2,31 gibi 3 farkli sekilde yazilan
 # ay tipini kabul etmek icin
-# yil icin belirtilen (19|20)\d\d)>> 1991,2000 gibi 20 ve 21. yüzyil ifadeleri icin
+# yil icin belirtilen (19|20)\d\d)>> 1991,2000 gibi 20 ve 21. yuzyil ifadeleri icin
 # yil tipini kabul etmek icin. yil icin 1777 gibi 20 ve21. yy disinda yil girersen hata alirsin
 #Note: buradaki sorunlar 0-15-2000-02-31-2015 gibi yanlis tarihleri de dogru sayacaktir
 
@@ -509,8 +509,8 @@ Created on 18 Ara 2016
 
 #----------------------------------------------------------------------------------------
 # #ornek program dosyanin icindeki metin icerigini degistirme
-# #Bir üstteki ornek programdan farki 
-# #üstteki programda dosya adlarindaki tarihleri amerikan style dan europe style a cevirdi
+# #Bir ustteki ornek programdan farki 
+# #ustteki programda dosya adlarindaki tarihleri amerikan style dan europe style a cevirdi
 # #Bu programda text icindeki tarhileri amerikan style dan europe style a cevirdi
 # import shutil, os, re
 # UgurTextFile2 = open('C:\\Users\\Purgoufr\\Documents\\Eclipse Projects\\Python\\Fundamental_Codes\\test_folder\\date_test_2_31-05-2016.txt', 'w')

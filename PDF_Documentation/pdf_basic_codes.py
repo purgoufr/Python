@@ -5,31 +5,31 @@ Created on 29 Ara 2016
 @author: Purgoufr
 '''
 
-# #PDF dosyasının toplam sayfa sayısı
+# #PDF dosyasinin toplam sayfa sayisi
 # import PyPDF2
 # pdfFileObj = open('meetingminutes.pdf', 'rb')
 # pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 # print(pdfReader.numPages)
 # 
-# #sayfa içeriğini getirme
+# #sayfa icerigini getirme
 # pageObj = pdfReader.getPage(1)
 # print(pageObj.extractText())
 
 #----------------------------------------------------------------------------------------
-# #PDF şifreli mi değil mi?
+# #PDF sifreli mi degil mi?
 # import PyPDF2
 # pdfReader = PyPDF2.PdfFileReader(open('encrypted.pdf', 'rb'))
 # print(pdfReader.isEncrypted)
 # 
-# #PDF şifresini yaz
+# #PDF sifresini yaz
 # print(pdfReader.decrypt('rosebud'))
-# #numarası yazılan sayfayı getir
+# #numarasi yazilan sayfayi getir
 # pageObj = pdfReader.getPage(0)
 # print(pageObj.extractText())
 
 #----------------------------------------------------------------------------------------
-# #PDF oluşturma-birden çok pdf i açıp içindekileri kopyalayıp yeni pdf oluşturabiliriz.
-# #Burada iki tane pdf dosyası açtık ve ikisini yeni oluşturduğumuz tek bir PDF de birleştirdik
+# #PDF olusturma-birden cok pdf i acip icindekileri kopyalayip yeni pdf olusturabiliriz.
+# #Burada iki tane pdf dosyasi actik ve ikisini yeni olusturdugumuz tek bir PDF de birlestirdik
 # 
 # import PyPDF2
 # pdf1File = open('meetingminutes.pdf', 'rb')
@@ -53,7 +53,7 @@ Created on 29 Ara 2016
 # pdf2File.close()
 
 #----------------------------------------------------------------------------------------
-# #PDF sayfa yönü değiştirme(rotate)
+# #PDF sayfa yonu degistirme(rotate)
 # import PyPDF2
 # minutesFile = open('meetingminutes.pdf', 'rb')
 # pdfReader = PyPDF2.PdfFileReader(minutesFile)
@@ -87,7 +87,7 @@ Created on 29 Ara 2016
 # resultPdfFile.close()
 
 #----------------------------------------------------------------------------------------
-# #PDF şifreleme(encrypt)
+# #PDF sifreleme(encrypt)
 # import PyPDF2
 # pdfFile = open('meetingminutes.pdf', 'rb')
 # pdfReader = PyPDF2.PdfFileReader(pdfFile)
@@ -101,14 +101,14 @@ Created on 29 Ara 2016
 # resultPdf.close()
 
 #----------------------------------------------------------------------------------------
-# #Geçerli çalışma dizinindeki tüm PDF'leri birleştirme
+# #Gecerli calisma dizinindeki tum PDF'leri birlestirme
 # import PyPDF2, os
 # pdfFiles = []
 # for filename in os.listdir('.'):
 #     if filename.endswith('.pdf'):
 #         pdfFiles.append(filename)
 #             
-# pdfFiles.sort(key=str.lower)                #Alfabetik sıralama
+# pdfFiles.sort(key=str.lower)                #Alfabetik siralama
 # pdfWriter = PyPDF2.PdfFileWriter()
 # 
 # #Loop through all the PDF files.

@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="response.raise_for_status()" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="http:////imgs.xkcd.com/"/>
+			<item value="os.m"/>
 			<item value="response.raise_for_status()"/>
 			<item value="while"/>
 			<item value="if"/>
 			<item value="Anchorage"/>
 			<item value="Autauga"/>
 			<item value="census"/>
-			<item value="ö"/>
-			<item value="ç"/>
 		</list>
 		<list key="replacehistory">
 			<item value="o"/>
