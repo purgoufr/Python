@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pydev-testrun version="1.0"?><pydev-testsuite>
+<summary errors="1" failures="0" finished="true" name="Test Run: 11" tests="0" total_time="Finished in: 0.00 secs."/>
+<test location="C:/Users/Purgoufr/Documents/Eclipse Projects/Python/Image_manipulation/Image_basic_codes.py" status="error" test="Image_basic_codes" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Purgoufr\Desktop\IDE\Eclipse_IDE\eclipse-cpp-neon-1a-win32-x86_64\eclipse\plugins\org.python.pydev_5.4.0.201611281236\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Image_manipulation\Image_basic_codes.py", line 10, in <module>
+    from PIL import ImageColor
+  File "C:\Users\Purgoufr\AppData\Local\Programs\Python\Python35-32\Lib\PIL\ImageColor.py", line 20, in <module>
+    from PIL import Image
+  File "C:\Users\Purgoufr\AppData\Local\Programs\Python\Python35-32\Lib\PIL\Image.py", line 67, in <module>
+    from PIL import _imaging as core
+ImportError: cannot import name '_imaging'
+ERROR: Module: Image_basic_codes could not be imported (file: C:/Users/Purgoufr/Documents/Eclipse Projects/Python/Image_manipulation/Image_basic_codes.py).
+]]></stderr>
+</test>
+<launch mode="run">
+<launch_memento><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration local="true" path="Image_manipulation Image_manipulation"/>
+]]></launch_memento>
+</launch>
+</pydev-testsuite>

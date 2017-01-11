@@ -1,0 +1,26 @@
+import imaplib
+import email
+
+mail = imaplib.IMAP4_SSL('imap.gmail.com')
+
+username = input('USERNAME (email):')
+password = input('PASSWORD: ')
+
+try:
+    mail.login(" snkogce@gmail.com ", " SK-6454449 ")
+    print ("Logged in as %r !" % " snkogce@gmail.com ")
+except imaplib.IMAP4.error:
+    print ("Log in failed.")
+
+mail.list()
+# Out: list of "folders" aka labels in gmail.
+mail.select("inbox") # connect to inbox.
+
+fromWho = input('FROM:')
+
+result, data = mail.uid('search', None, '(FROM fromWho)')
+latest_email_uid = data[0].split()[-1]
+result, data = mail.uid('fetch', latest_email_uid, '(RFC822)')
+raw_email = data[0][1]
+
+print (raw_email)

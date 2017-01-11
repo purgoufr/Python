@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+#
+# Very basic example of using Python and IMAP to iterate over emails in a
+# gmail folder/label.  This code is released into the public domain.
+#
+# RKI July 2013
+# http://www.voidynullness.net/blog/2013/07/25/gmail-email-with-python-via-imap/
+#
+import sys
+import imaplib
+import getpass
+import email
+import email.header
+import datetime
+
+EMAIL_ACCOUNT = "notatallawhistleblowerIswear@gmail.com"
+EMAIL_FOLDER = "Top Secret/PRISM Documents"
+
+
+def process_mailbox(M):
+    """
+    Do something with emails messages in the folder.  
+    For the sake of this example, print some headers.
+    """
+
+
+M = imaplib.IMAP4_SSL('imap.gmail.com')
+
+try:
+    rv, data = M.login(EMAIL_ACCOUNT, getpass.getpass())
+except imaplib.IMAP4.error:
+    print ("LOGIN FAILED!!! ")
+    sys.exit(1)
+
+print (data)
+
+mailboxes = M.list()
+print (mailboxes)
+M.logout()

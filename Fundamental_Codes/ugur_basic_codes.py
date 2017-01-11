@@ -602,4 +602,37 @@ Created on 18 Ara 2016
 # print 4 // 3
 
 #----------------------------------------------------------------------------------------
+# #input al, aldigin inputtan 0 a kadar tum sayilarin karelerini goster
+# if __name__ == '__main__':
+#     n = int(input())
+#       
+#     i = 0
+#     while i < n:
+#         print(i*i)
+#         i += 1
+
+#----------------------------------------------------------------------------------------
+#'*' isareti normal ve köşeli parantezi ortadan kaldırır ve 
+
+#function(*[arg1,arg2,arg3]) becomes ==>>> function(arg1,arg2,arg3)
+
+#So *user changes from a list:
+#user = [name, password, captcha] becomes ==>>> *user = name, password, captcha
+
+
+#ornek program girdiğin sayıya kadar olan sayıları yazdırır.mrn. 3 girersen output 123 olur
+# if __name__ == '__main__':
+#      
+#     print(*range(1, int(input())+1), sep='')
+
+
+    
+    
+
+
+
+
+
+
+
 

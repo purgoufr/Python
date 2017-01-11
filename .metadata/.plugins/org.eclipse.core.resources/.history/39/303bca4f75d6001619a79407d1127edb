@@ -1,0 +1,6 @@
+import imaplib
+mail = imaplib.IMAP4_SSL('imap.mail.yahoo.com')
+mail.login('purgoufr@yahoo.com', 'mehmet123')
+mail.list()
+# Out: list of "folders" aka labels in gmail.
+mail.select("inbox") # connect to inbox.

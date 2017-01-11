@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 7 Oca 2017
+
+@author: Purgoufr
+'''
+
+# ---Provider---                   ---SMTP server domain name---
+#                                     Genel SMTP portu=587
+# Gmail                               smtp.gmail.com
+# 
+# Outlook.com/Hotmail.com             smtp-mail.outlook.com
+# 
+# Yahoo Mail                          smtp.mail.yahoo.com
+# 
+# AT&T                                smpt.mail.att.net (port 465)
+# 
+# Comcast                             smtp.comcast.net
+# 
+# Verizon                             smtp.verizon.net (port 465)
+
+
+import smtplib
+smtpObj = smtplib.SMTP('smtp.mail.yahoo.com', 587)
+smtpObj.ehlo()
+smtpObj.starttls()
+smtpObj.login('purgoufr', 'mehmet123')
+smtpObj.sendmail('purgoufr@yahoo.com', 'ugurkebir_91@yahoo.com.tr', 'Subject: So long.\nDear Alice, so long and thanks for all the fish. Sincerely, Bob')
+smtpObj.quit()
+
+#----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

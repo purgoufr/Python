@@ -1,13 +1,22 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\Purgoufr\Documents\Eclipse Projects\Python\.metadata\.plugins\org.eclipse.core.resources\.projects\Email_and_Text_Message\com.python.pydev.analysis\v2_indexcache
-smtp_basic_codes|1483791460250643000|C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Email_and_Text_Message\smtp_basic_codes.py
+IMAP_basic_codes|1483974970477106000|C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Email_and_Text_Message\IMAP_basic_codes.py
+Twilio_script|1483973685488789000|C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Email_and_Text_Message\Twilio_script.py
+smtp_basic_codes|1483974162254476000|C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Email_and_Text_Message\smtp_basic_codes.py
+textMyself|1483921494740889000|C:\Users\Purgoufr\Documents\Eclipse Projects\Python\Email_and_Text_Message\textMyself.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+1
+1=textMyself
 -- END DICTIONARY
 -- START TREE 1
-0
+5
+acc|1|accountSID!11@
+aut|1|authToken!11@
+myn|1|myNumber!11@
+tex|1|textmyself!10@
+twi|1|twilioNumber!11@
 -- END TREE
 -- START TREE 2
 0

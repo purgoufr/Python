@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 7 Oca 2017
+
+@author: Purgoufr
+'''
+#----Provider---                   ---SMTP server domain name---
+# Gmail                               imap.gmail.com
+# 
+# Outlook.com/Hotmail.com             imap-mail.outlook.com
+# 
+# Yahoo Mail                          imap.mail.yahoo.com
+# 
+# AT&T                                imap.mail.att.net
+# 
+# Comcast                             imap.comcast.net
+# 
+# Verizon                             incoming.verizon.net
+# 
+
+
+import imaplib
+imapObj = imaplib.IMAP4_SSL('imap.gmail.com')
+
+ print('Enter your mail adress')
+ mail = input()
+ print(mail)
+   
+ print('Enter your password')
+ password = input()
+ print(password)
+imapObj.login(mail, password)
+
+#imapObj.login(' example@gmail.com ', ' password ')  #mail ve sifre gir!!!
+imapObj.list()
+# Out: list of "folders" aka labels in gmail.
+imapObj.select("inbox") # connect to inbox.
+
+result, data = imapObj.search(None, "ALL")
+ 
+ids = data[0] # data is a list.
+id_list = ids.split() # ids is a space separated string
+latest_email_id = id_list[-1] # get the latest
+ 
+result, data = imapObj.fetch(latest_email_id, "(RFC822)") # fetch the email body (RFC822) for the given ID
+ 
+raw_email = data[0][1] # here's the body, which is raw text of the whole email
+# including headers and alternate payloads
+print(raw_email)
+
+result, data = imapObj.uid('search', None, "ALL") # search and return uids instead
+latest_email_uid = data[0].split()[-1]
+result, data = imapObj.uid('fetch', latest_email_uid, '(RFC822)')
+raw_email = data[0][1]
+
+
+#----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
