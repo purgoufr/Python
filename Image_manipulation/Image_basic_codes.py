@@ -5,133 +5,133 @@ Created on 9 Oca 2017
 @author: Purgoufr
 '''
 # 
-# #Renklerin Standart rgba değeri, Standard Color Names and Their RGBA Values
+# #Renklerin Standart rgba degeri, Standard Color Names and Their RGBA Values
 # 
-# from PIL import ImageColor
-# print(ImageColor.getcolor('red', 'RGBA'))
-# print(ImageColor.getcolor('RED', 'RGBA'))
-# print(ImageColor.getcolor('Black', 'RGBA'))
-# print(ImageColor.getcolor('chocolate', 'RGBA'))
-# print(ImageColor.getcolor('CornflowerBlue', 'RGBA'))
+# from PiL import imageColor
+# print(imageColor.getcolor('red', 'RGBA'))
+# print(imageColor.getcolor('RED', 'RGBA'))
+# print(imageColor.getcolor('Black', 'RGBA'))
+# print(imageColor.getcolor('chocolate', 'RGBA'))
+# print(imageColor.getcolor('CornflowerBlue', 'RGBA'))
 
 #----------------------------------------------------------------------------------------
-# #Resim dosyası açma
-# from PIL import Image
-# catIm = Image.open('zophie.png')
-# print(catIm.size)
+# #Resim dosyasi acma
+# from PiL import image
+# catim = image.open('zophie.png')
+# print(catim.size)
 # 
 # #Resim boyutunu getir
-# width, height = catIm.size
+# width, height = catim.size
 # print(width)
 # print(height)
 # 
-# #Resim adını getir
-# print(catIm.filename)
+# #Resim adini getir
+# print(catim.filename)
 # 
-# #Resim formatını getir
-# print(catIm.format)
-# print(catIm.format_description)
+# #Resim formatini getir
+# print(catim.format)
+# print(catim.format_description)
 # 
-# #Resim formatını değiştirme 
-# catIm.save('zophie.jpg')
+# #Resim formatini degistirme 
+# catim.save('zophie.jpg')
 
 #----------------------------------------------------------------------------------------
-# # Resim dosyası oluşturma
-# from PIL import Image
-# im = Image.new('RGBA', (100, 200), 'purple')
-# im.save('purpleImage.png')
-# im2 = Image.new('RGBA', (20, 20))
-# im2.save('transparentImage.png')
+# # Resim dosyasi olusturma
+# from PiL import image
+# im = image.new('RGBA', (100, 200), 'purple')
+# im.save('purpleimage.png')
+# im2 = image.new('RGBA', (20, 20))
+# im2.save('transparentimage.png')
 
 #----------------------------------------------------------------------------------------
-# # Resimin bir parça kesme 
-# from PIL import Image
-# catIm = Image.open('zophie.png')
-# print(catIm.size)
-# croppedIm = catIm.crop((335, 345, 565, 560))
-# croppedIm.save('cropped.png')
+# # Resimin bir parca kesme 
+# from PiL import image
+# catim = image.open('zophie.png')
+# print(catim.size)
+# croppedim = catim.crop((335, 345, 565, 560))
+# croppedim.save('cropped.png')
 
 #----------------------------------------------------------------------------------------
 # #Resim kopyalama     
-# from PIL import Image
-# catIm = Image.open('zophie.png')
-# catCopyIm = catIm.copy()
+# from PiL import image
+# catim = image.open('zophie.png')
+# catCopyim = catim.copy()
 # 
 # #Resimi kes
-# faceIm = catIm.crop((335, 345, 565, 560))
-# print(faceIm.size)
+# faceim = catim.crop((335, 345, 565, 560))
+# print(faceim.size)
 # 
-# #Resim yapıştırma
-# catCopyIm.paste(faceIm, (0, 0))
-# #Resim yapıştırma 
-# catCopyIm.paste(faceIm, (400, 500))
-# catCopyIm.save('pasted.png')
+# #Resim yapistirma
+# catCopyim.paste(faceim, (0, 0))
+# #Resim yapistirma 
+# catCopyim.paste(faceim, (400, 500))
+# catCopyim.save('pasted.png')
 
 #----------------------------------------------------------------------------------------
-# #Resimden bir parça kopyalayıp resimin tamamına yapıştırma
-# from PIL import Image
-# catIm = Image.open('zophie.png')
-# catImWidth, catImHeight = catIm.size
+# #Resimden bir parca kopyalayip resimin tamamina yapistirma
+# from PiL import image
+# catim = image.open('zophie.png')
+# catimWidth, catimHeight = catim.size
 # 
-# faceIm = catIm.crop((335, 345, 565, 560))
+# faceim = catim.crop((335, 345, 565, 560))
 # 
-# faceImWidth, faceImHeight = faceIm.size
-# catCopyTwo = catIm.copy()
+# faceimWidth, faceimHeight = faceim.size
+# catCopyTwo = catim.copy()
 # 
-# for left in range(0, catImWidth, faceImWidth):
-#     for top in range(0, catImHeight, faceImHeight):
+# for left in range(0, catimWidth, faceimWidth):
+#     for top in range(0, catimHeight, faceimHeight):
 #         print(left, top)
-#         catCopyTwo.paste(faceIm, (left, top))
+#         catCopyTwo.paste(faceim, (left, top))
 # catCopyTwo.save('tiled.png')
 
 #----------------------------------------------------------------------------------------
-# #Resimin boyutlarını değiştirme
+# #Resimin boyutlarini degistirme
 # 
-# from PIL import Image
+# from PiL import image
 # #Orijinal resim boyutu
-# catIm = Image.open('zophie.png')
-# width, height = catIm.size
+# catim = image.open('zophie.png')
+# width, height = catim.size
 # 
-# #yüksekliği ve genişliği 2 ye böldük
-# quartersizedIm = catIm.resize((int(width / 2), int(height / 2)))
-# quartersizedIm.save('quartersized.png')
+# #yuksekligi ve genisligi 2 ye bolduk
+# quartersizedim = catim.resize((int(width / 2), int(height / 2)))
+# quartersizedim.save('quartersized.png')
 # 
-# #yüksekliğe ve genişliğe 500 ekledik
-# svelteIm = catIm.resize((width+500, height + 500))
-# svelteIm.save('svelte.png')
+# #yukseklige ve genislige 500 ekledik
+# svelteim = catim.resize((width+500, height + 500))
+# svelteim.save('svelte.png')
 
 #----------------------------------------------------------------------------------------
-# #Resimi döndürme
-# from PIL import Image
+# #Resimi dondurme
+# from PiL import image
 # 
-# catIm = Image.open('zophie.png')
-# catIm.rotate(90).save('rotated90.png')
-# catIm.rotate(180).save('rotated180.png')
+# catim = image.open('zophie.png')
+# catim.rotate(90).save('rotated90.png')
+# catim.rotate(180).save('rotated180.png')
 # 
-# # Rotate() yönteminde, döndürülen yeni görüntünün tümüne uyacak şekilde olması için True anahtarını kullan
+# # Rotate() yonteminde, dondurulen yeni goruntunun tumune uyacak sekilde olmasi icin True anahtarini kullan
 # 
-# catIm.rotate(6).save('rotated6.png')
-# catIm.rotate(6, expand=True).save('rotated6_expanded.png')
+# catim.rotate(6).save('rotated6.png')
+# catim.rotate(6, expand=True).save('rotated6_expanded.png')
 # 
-# #Ayna (mirror) yöntemiyle sağa sola yukarı aşşağı döndürme
-# catIm.transpose(Image.FLIP_LEFT_RIGHT).save('horizontal_flip.png')
-# catIm.transpose(Image.FLIP_TOP_BOTTOM).save('vertical_flip.png')
+# #Ayna (mirror) yontemiyle saga sola yukari assagi dondurme
+# catim.transpose(image.FLiP_LEFT_RiGHT).save('horizontal_flip.png')
+# catim.transpose(image.FLiP_TOP_BOTTOM).save('vertical_flip.png')
 
 #----------------------------------------------------------------------------------------
-# # Piksellerle resim oluşturma (getpixel() ve putpixel() Kullanımı) 
+# # Piksellerle resim olusturma (getpixel() ve putpixel() Kullanimi) 
 
-# from PIL import Image
-# im = Image.new('RGBA', (100, 100))
+# from PiL import image
+# im = image.new('RGBA', (100, 100))
 # im.getpixel((0, 0))
 # 
 # for x in range(100):
 #     for y in range(50):
 #         im.putpixel((x, y), (210, 210, 210))
 #         
-# from PIL import ImageColor
+# from PiL import imageColor
 # for x in range(100):
 #     for y in range(50, 100):
-#         im.putpixel((x, y), ImageColor.getcolor('darkgray', 'RGBA'))
+#         im.putpixel((x, y), imageColor.getcolor('darkgray', 'RGBA'))
 # im.getpixel((0, 0))
 # im.getpixel((0, 50))
 # im.save('putPixel.png')
@@ -139,62 +139,62 @@ Created on 9 Oca 2017
 #----------------------------------------------------------------------------------------
 # #Resime logo ekleme
 # import os
-# from PIL import Image
+# from PiL import image
 # 
-# SQUARE_FIT_SIZE = 300
-# LOGO_FILENAME = 'logo.png'
+# SQUARE_FiT_SiZE = 300
+# LOGO_FiLENAME = 'logo.png'
 # 
-# logoIm = Image.open(LOGO_FILENAME)
-# logoWidth, logoHeight = logoIm.size
+# logoim = image.open(LOGO_FiLENAME)
+# logoWidth, logoHeight = logoim.size
 # print(logoWidth)
 # print(logoHeight)
-# os.makedirs('withLogo', exist_ok=True)   #exist_ok=True bu dosya zaten var diye hata vermesini önler
+# os.makedirs('withLogo', exist_ok=True)   #exist_ok=True bu dosya zaten var diye hata vermesini onler
 # 
 # # Loop over all files in the working directory. 
-# #Eğer çalışma alanında jpg,png veya senin tanımladığın isimde logo yoksa açmaz varsa im değişkenine atar
+# #Eger calisma alaninda jpg,png veya senin tanimladigin isimde logo yoksa acmaz varsa im degiskenine atar
 # 
 # for filename in os.listdir('.'):
 # #     if not (filename.endswith('.png') or filename.endswith('.jpg')) \
-# #         or filename == LOGO_FILENAME:   
-#     if not (filename.endswith('.png') or filename.endswith('.jpg') or filename == LOGO_FILENAME):
+# #         or filename == LOGO_FiLENAME:   
+#     if not (filename.endswith('.png') or filename.endswith('.jpg') or filename == LOGO_FiLENAME):
 #         continue # skip non-image files and the logo file itself
 # 
-#     im = Image.open(filename)
+#     im = image.open(filename)
 #     width, height = im.size
 # 
 # # Check if image needs to be resized.
-# #Logo ekleyeceğimiz resimin boyutunu 300x300 yapıyoruz
-#     if width > SQUARE_FIT_SIZE and height > SQUARE_FIT_SIZE:
+# #Logo ekleyecegimiz resimin boyutunu 300x300 yapiyoruz
+#     if width > SQUARE_FiT_SiZE and height > SQUARE_FiT_SiZE:
 #         # Calculate the new width and height to resize to.
 #         if width > height:
-#             height = int((SQUARE_FIT_SIZE / width) * height)
-#             width = SQUARE_FIT_SIZE
+#             height = int((SQUARE_FiT_SiZE / width) * height)
+#             width = SQUARE_FiT_SiZE
 #         else:
-#             width = int((SQUARE_FIT_SIZE / height) * width)
-#             height = SQUARE_FIT_SIZE
+#             width = int((SQUARE_FiT_SiZE / height) * width)
+#             height = SQUARE_FiT_SiZE
 #             
 #         # Resize the image.
 #         print('Resizing %s...' % (filename))
 #         im = im.resize((width, height))
 #         
-#         # Resize the LOGo. LOGO nun boyutunu değiştirdik
-#         logoIm=logoIm.resize((75,100))
-#         logoWidth, logoHeight = logoIm.size
+#         # Resize the LOGo. LOGO nun boyutunu degistirdik
+#         logoim=logoim.resize((75,100))
+#         logoWidth, logoHeight = logoim.size
 #         
 #         print('Adding logo to %s...' % (filename))
-#         im.paste(logoIm, (width - logoWidth, height - logoHeight), logoIm)
+#         im.paste(logoim, (width - logoWidth, height - logoHeight), logoim)
 # 
 #         # Save changes.
 #         im.save(os.path.join('withLogo', filename))
 
 #----------------------------------------------------------------------------------------
-# #Geometrik şekillerle resim oluşturma Draw function
-# from PIL import Image, ImageDraw
-# im = Image.new('RGBA', (200, 200), 'white')
-# draw = ImageDraw.Draw(im)
+# #Geometrik sekillerle resim olusturma Draw function
+# from PiL import image, imageDraw
+# im = image.new('RGBA', (200, 200), 'white')
+# draw = imageDraw.Draw(im)
 # 
-# #koordinat sisteminde düşün her parantez iki boyutu ifade eder (x,y)
-# draw.line([(0, 0), (199, 0), (199, 199), (0, 199), (0, 0)], fill='black') #siyah çerçeve
+# #koordinat sisteminde dusun her parantez iki boyutu ifade eder (x,y)
+# draw.line([(0, 0), (199, 0), (199, 199), (0, 199), (0, 0)], fill='black') #siyah cerceve
 # 
 # draw.rectangle((20, 30, 60, 60), fill='blue')
 # 
@@ -202,24 +202,24 @@ Created on 9 Oca 2017
 # 
 # draw.polygon(((57, 87), (79, 62), (94, 85), (120, 90), (103, 113)),fill='brown')
 # 
-# #For döngüsü ile çizilmiş bir yeşil çizgi deseni
+# #For dongusu ile cizilmis bir yesil cizgi deseni
 # for i in range(100, 200, 10):
 #     draw.line([(i, 0), (200, i - 100)], fill='green')
 # 
 # im.save('drawing.png')
 
 #----------------------------------------------------------------------------------------
-# # text png oluşturma. Yazı yazarak resim dosyası oluşturma
-# from PIL import Image, ImageDraw, ImageFont
+# # text png olusturma. Yazi yazarak resim dosyasi olusturma
+# from PiL import image, imageDraw, imageFont
 # import os
 # 
-# im = Image.new('RGBA', (200, 200), 'white')
-# draw = ImageDraw.Draw(im)
+# im = image.new('RGBA', (200, 200), 'white')
+# draw = imageDraw.Draw(im)
 # 
 # draw.text((20, 150), 'Hello', fill='purple')
 # 
 # fontsFolder = 'FONT_FOLDER' # e.g. 'Library/Fonts'
-# arialFont = ImageFont.truetype(os.path.join(fontsFolder, 'arial.ttf'), 32)  #yazı fontu ve yazı boyutu belirleme
+# arialFont = imageFont.truetype(os.path.join(fontsFolder, 'arial.ttf'), 32)  #yazi fontu ve yazi boyutu belirleme
 # 
 # draw.text((100, 150), 'Howdy', fill='gray', font=arialFont)
 # im.save('text.png')

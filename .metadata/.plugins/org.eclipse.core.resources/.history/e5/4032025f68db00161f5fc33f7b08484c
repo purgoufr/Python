@@ -1,0 +1,246 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 12 Oca 2017
+
+@author: Purgoufr
+'''
+
+# #GUI kullanırken oluşabilecek hataları önlemek için alınabilecek tedbirler
+# #*Çıkış Yaparak Herşeyi Kapatmak
+# 
+# #*Her fonksiyon çağırdıktan sonra PAUSE kullanmak('pyautogui.PAUSE = 1.5' ==>> her fonksiyondan sonra 1.5sn bekle)
+# 
+# #*Fail-Safe özelliği>>>Fare imlecini ekranın sol üst köşesine getirmek PyAutoGUI'ın "pyautogui.FailSafeException"
+# #exception ınını raise eder.Programınız bu exception ı try ve except deyimleriyle işleyebilir veya exception ın 
+# #programınızı crash(çökertmesine) izin verebilir.Her iki durumda da Fail-Safe özelliği, fare hızla 
+# #yukarı ve sola mümkün olduğunca hareket ettirirse programı durduracaktır. Bu özelliği 'FAILSAFE=FALSE' yaparak 
+# #durdurabilirsiniz
+# 
+# import pyautogui
+# pyautogui.PAUSE = 1
+# pyautogui.FAILSAFE = True
+
+#----------------------------------------------------------------------------------------
+# #Ekran genişliğini ve yüksekliğini yazdırma
+# import pyautogui
+# print(pyautogui.size())
+# width, height = pyautogui.size()
+
+#----------------------------------------------------------------------------------------
+# #Mouse hareket ettirme(moveTo)
+# #0.25sn boyunca verilen kordinatlarda (x,y) mouse hareket eder.
+# #Programı durdurmak için mouse u sol üst köşeye hızla sürükle!
+
+# import pyautogui
+# for i in range(10):
+#     pyautogui.moveTo(100, 100, duration=0.25)
+#     pyautogui.moveTo(200, 100, duration=0.25)
+#     pyautogui.moveTo(200, 200, duration=0.25)
+#     pyautogui.moveTo(100, 200, duration=0.25)
+
+#----------------------------------------------------------------------------------------
+# #Mouse hareket ettirme(moveRel)
+# #0.25sn boyunca mouse nerede olursa olsun hareket eder. "-" koordinat ters yönde hareket ettirir
+# #örneğin "-x" sola doğru "-y" yukarı doğru hareket ettirir 
+# #(yukarıdaki örnekten farkı koordinatlar sabit yerde değil o an neredeyse orada hareket eder) 
+# #Programı durdurmak için mouse u sol üst köşeye hızla sürükle!
+
+# import pyautogui
+# for i in range(10):
+#     pyautogui.moveRel(100, 0, duration=0.25)
+#     pyautogui.moveRel(0, 100, duration=0.25)
+#     pyautogui.moveRel(-100, 0, duration=0.25)
+#     pyautogui.moveRel(0, -100, duration=0.25)
+
+#----------------------------------------------------------------------------------------
+# #mouse pozisyonu yani koordinatlarını gösterir
+# import pyautogui
+# print(pyautogui.position())
+
+#----------------------------------------------------------------------------------------
+#Ornek Program. Sürekli Mouse pozisyonunu(mouse un nerede olduğunu) gösterecek 
+#position function kullanılacak.eski pozisyonu silip sürekli yeni pozisyonu gösterecek(mouse hareket ettikçe)
+#Kullanıcının CTRL-C tuşuna basarak çıkabilmesi için KeyboardInterrupt özel durumunu kullanacağız.
+ 
+import pyautogui
+print('CTRL-C to quit')
+try:
+    while True:
+        #Burada position function da tuple olan integer x ve y koordinatlarını string forma çeviriyoruz
+        #rjust ile 4 dijitli koordinatı sağa yaslıyoruz
+        x,y = pyautogui.position()
+        positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)  
+         
+        #Print () için end = '' anahtar kelime bağımsız değişkeni, varsayılan 
+        #satır başı karakterinin yazdırılan satırın sonuna eklenmesini engeller. 
+        print(positionStr, end = '')
+         
+        #Metni silmek için \ b (backspace escape character)
+        #aşağıdaki kod sadece positionStr nin silinip yeni değerinin getirilmesini sağlar
+        print('\b' * len(positionStr),end ='',flush=True)         
+         
+except KeyboardInterrupt:               #Programı drdurmak için CTRL-C 
+    print('\nDone')
+  
+#----------------------------------------------------------------------------------------
+# #ekranda belirlediğin noktaya tıklama(click) default ken sol click aktif
+# import pyautogui
+# pyautogui.click(10, 5)
+# #ekranda belirlediğin noktaya sağ tıklama(click)
+# pyautogui.click(200, 250, button='right')
+
+#----------------------------------------------------------------------------------------
+# #örnek program. paint e resim çizme
+# import pyautogui,time
+# #time.sleep() i delay function gibi düşünebiliriz.
+# #paint i açıp tool seçene kadar zaman kazanmak için programı 5 sn delay ettik
+# time.sleep(5)
+# pyautogui.click()       #çizim programına focuslanmak için tıkla
+# 
+# distance = 200
+# while distance>0:    
+#     pyautogui.dragRel(distance, 0, duration=0.3)          #move right(sağa hareket)
+#     distance = distance - 10
+#     pyautogui.dragRel(0,distance,duration=0.3)            #move down(aşağı hareket)    
+#     pyautogui.dragRel(-distance,0,duration=0.3)           #move left(sola hareket)
+#     distance = distance - 10
+#     pyautogui.dragRel(0,-distance,duration=0.3)           #move up(yukarı hareket)        
+    
+#----------------------------------------------------------------------------------------
+# #sayfa kaydırma
+# import pyautogui
+# pyautogui.scroll(200)
+
+#----------------------------------------------------------------------------------------
+# #mouse un konumunun koordinatlarını getir ve o konumdaki pixel in renklerini getirb
+# import pyautogui, time
+# print('CTRL-C to quit')
+# try:
+#     while True:
+#         #Burada position function da tuple olan integer x ve y koordinatlarını string forma çeviriyoruz
+#         #rjust ile 4 dijitli koordinatı sağa yaslıyoruz
+#         x,y = pyautogui.position()
+#         positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)  
+#         pixelColor = pyautogui.screenshot().getpixel((x, y))
+#         positionStr += ' RGB: (' + str(pixelColor[0]).rjust(3)
+#         positionStr += ', ' + str(pixelColor[1]).rjust(3)
+#         positionStr += ', ' + str(pixelColor[2]).rjust(3) + ')'
+#          
+#         #Print () için end = '' anahtar kelime bağımsız değişkeni, varsayılan 
+#         #satır başı karakterinin yazdırılan satırın sonuna eklenmesini engeller. 
+#         print(positionStr, end = '')
+#          
+#         #Metni silmek için \ b (backspace escape character)
+#         #aşağıdaki kod sadece positionStr nin silinip yeni değerinin getirilmesini sağlar
+#         print('\b' * len(positionStr),end ='',flush=True)         
+#         print('\n')
+#         time.sleep(2)
+#          
+# except KeyboardInterrupt:               #Programı drdurmak için CTRL-C 
+#     print('\nDone')
+
+#----------------------------------------------------------------------------------------
+# #sanal klavye kullanarak text yazma. 0.5 sn beklerek yazma eğer 0.5 i silersen beklemeden yazı yazar
+# import pyautogui
+# pyautogui.click(100, 100); pyautogui.typewrite('Hello world!', 0.5)
+
+#----------------------------------------------------------------------------------------
+#Fonksiyonel tuşlar 'enter' ,'esc' 'Ctrl' gibi tuşlar için tuş stringleri
+
+#Keyboard key string                         Meaning
+
+#'a', 'b', 'c', 'A', 'B',                     The keys for single characters  
+#'C', '1', '2', '3', '!', '@', '#',
+
+#'enter' (or 'return' or '\n')                The ENTER key
+
+#'esc'                                        The ESC key
+
+#'shiftleft', 'shiftright'                    The left and right SHIFT keys
+
+#'altleft', 'altright'                        The left and right ALT keys
+
+#'ctrlleft', 'ctrlright'                      The left and right CTRL keys
+
+#'tab' (or '\t')                              The TAB key
+
+#'backspace', 'delete'                        The BACKSPACE and DELETE keys
+
+#'pageup', 'pagedown'                         The PAGE UP and PAGE DOWN keys
+
+#'home', 'end'                                The HOME and END keys
+
+#'up', 'down', 'left', 'right'                The up, down, left, and right arrow keys
+
+#'f1', 'f2', 'f3'....                         The F1 to F12 keys  
+
+#'volumemute', 'volumedown', 'volumeup'       The mute, volume down, and volume up keys 
+
+#'pause'                                      The PAUSE key
+
+#'capslock', 'numlock', 'scrolllock'          The CAPS LOCK, NUM LOCK, and SCROLL LOCK keys
+
+#'insert'                                     The INS or INSERT key
+
+#'printscreen'                                The PRTSC or PRINT SCREEN key
+
+#'winleft', 'winright'                        The left and right WIN keys (on Windows)
+
+#'command'                                    The Command () key (on OS X) 'option' The OPTION key (on OS X)
+
+#----------------------------------------------------------------------------------------
+# #tuşa basılı tutup bırakma
+# #burada shift e basılı tutup 4 e basıyor (+ işareti oluşur) program sonra shift i bırakıyor
+# import pyautogui
+# pyautogui.keyDown('shift'); pyautogui.press('4'); pyautogui.keyUp('shift')
+# 
+# #copy paste için
+# import pyautogui
+# pyautogui.keyDown('ctrl')
+# pyautogui.keyDown('c')
+# pyautogui.keyUp('c')
+# pyautogui.keyUp('ctrl')
+
+#----------------------------------------------------------------------------------------
+# #çoklu tuş kombinasyonu için
+# import pyautogui
+# pyautogui.hotkey('ctrl', 'c')
+
+#----------------------------------------------------------------------------------------
+#Örnek Program
+#Google docs u otomatik dolduracak program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

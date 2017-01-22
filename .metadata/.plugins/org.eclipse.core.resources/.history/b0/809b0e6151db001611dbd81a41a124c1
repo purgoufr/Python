@@ -1,0 +1,132 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 12 Oca 2017
+
+@author: Purgoufr
+'''
+
+# #GUI kullanırken oluşabilecek hataları önlemek için alınabilecek tedbirler
+# #*Çıkış Yaparak Herşeyi Kapatmak
+# 
+# #*Her fonksiyon çağırdıktan sonra PAUSE kullanmak('pyautogui.PAUSE = 1.5' ==>> her fonksiyondan sonra 1.5sn bekle)
+# 
+# #*Fail-Safe özelliği>>>Fare imlecini ekranın sol üst köşesine getirmek PyAutoGUI'ın "pyautogui.FailSafeException"
+# #exception ınını raise eder.Programınız bu exception ı try ve except deyimleriyle işleyebilir veya exception ın 
+# #programınızı crash(çökertmesine) izin verebilir.Her iki durumda da Fail-Safe özelliği, fare hızla 
+# #yukarı ve sola mümkün olduğunca hareket ettirirse programı durduracaktır. Bu özelliği 'FAILSAFE=FALSE' yaparak 
+# #durdurabilirsiniz
+# 
+# import pyautogui
+# pyautogui.PAUSE = 1
+# pyautogui.FAILSAFE = True
+
+#----------------------------------------------------------------------------------------
+# #Ekran genişliğini ve yüksekliğini yazdırma
+# import pyautogui
+# print(pyautogui.size())
+# width, height = pyautogui.size()
+
+#----------------------------------------------------------------------------------------
+# #Mouse hareket ettirme(moveTo)
+# #0.25sn boyunca verilen kordinatlarda (x,y) mouse hareket eder.
+# #Programı durdurmak için mouse u sol üst köşeye hızla sürükle!
+
+# import pyautogui
+# for i in range(10):
+#     pyautogui.moveTo(100, 100, duration=0.25)
+#     pyautogui.moveTo(200, 100, duration=0.25)
+#     pyautogui.moveTo(200, 200, duration=0.25)
+#     pyautogui.moveTo(100, 200, duration=0.25)
+
+#----------------------------------------------------------------------------------------
+# #Mouse hareket ettirme(moveRel)
+# #0.25sn boyunca mouse nerede olursa olsun hareket eder. "-" koordinat ters yönde hareket ettirir
+# #örneğin "-x" sola doğru "-y" yukarı doğru hareket ettirir 
+# #(yukarıdaki örnekten farkı koordinatlar sabit yerde değil o an neredeyse orada hareket eder) 
+# #Programı durdurmak için mouse u sol üst köşeye hızla sürükle!
+
+# import pyautogui
+# for i in range(10):
+#     pyautogui.moveRel(100, 0, duration=0.25)
+#     pyautogui.moveRel(0, 100, duration=0.25)
+#     pyautogui.moveRel(-100, 0, duration=0.25)
+#     pyautogui.moveRel(0, -100, duration=0.25)
+
+#----------------------------------------------------------------------------------------
+# #mouse pozisyonu yani koordinatlarını gösterir
+# import pyautogui
+# print(pyautogui.position())
+
+#----------------------------------------------------------------------------------------
+# #Ornek Program. Sürekli Mouse pozisyonunu(mouse un nerede olduğunu) gösterecek 
+# #position function kullanılacak.eski pozisyonu silip sürekli yeni pozisyonu gösterecek(mouse hareket ettikçe)
+# #Kullanıcının CTRL-C tuşuna basarak çıkabilmesi için KeyboardInterrupt özel durumunu kullanacağız.
+# 
+# import pyautogui
+# print('CTRL-C to quit')
+# try:
+#     while True:
+#         #Burada position function da tuple olan integer x ve y koordinatlarını string forma çeviriyoruz
+#         #rjust ile 4 dijitli koordinatı sağa yaslıyoruz
+#         x,y = pyautogui.position()
+#         positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)  
+#         
+#         #Print () için end = '' anahtar kelime bağımsız değişkeni, varsayılan 
+#         #satır başı karakterinin yazdırılan satırın sonuna eklenmesini engeller. 
+#         print(positionStr, end = '')
+#         
+#         #Metni silmek için \ b (backspace escape character)
+#         #aşağıdaki kod sadece positionStr nin silinip yeni değerinin getirilmesini sağlar
+#         print('\b' * len(positionStr),end ='',flush=True)         
+#         
+# except KeyboardInterrupt:               #Programı drdurmak için CTRL-C 
+#     print('\nDone')
+  
+#----------------------------------------------------------------------------------------
+# #ekranda belirlediğin noktaya tıklama(click) default ken sol click aktif
+# import pyautogui
+# pyautogui.click(10, 5)
+# #ekranda belirlediğin noktaya sağ tıklama(click)
+# pyautogui.click(200, 250, button='right')
+
+#----------------------------------------------------------------------------------------
+# #örnek program. paint e resim çizme
+# import pyautogui,time
+# #time.sleep() i delay function gibi düşünebiliriz.
+# #paint i açıp tool seçene kadar zaman kazanmak için programı 5 sn delay ettik
+# time.sleep(5)
+# pyautogui.click()       #çizim programına focuslanmak için tıkla
+# 
+# distance = 200
+# while distance>0:    
+#     pyautogui.dragRel(distance, 0, duration=0.3)          #move right(sağa hareket)
+#     distance = distance - 10
+#     pyautogui.dragRel(0,distance,duration=0.3)            #move down(aşağı hareket)    
+#     pyautogui.dragRel(-distance,0,duration=0.3)           #move left(sola hareket)
+#     distance = distance - 10
+#     pyautogui.dragRel(0,-distance,duration=0.3)           #move up(yukarı hareket)        
+    
+#----------------------------------------------------------------------------------------
+# #sayfa kaydırma
+# import pyautogui
+# pyautogui.scroll(200)
+
+#----------------------------------------------------------------------------------------
+
+import pyautogui
+im = pyautogui.screenshot()
+print(im.getpixel((50, 200)))
+print(pyautogui.pixelMatchesColor(50, 200, (255, 254, 238)))
+
+
+
+
+
+
+
+
+
+
+
+
+
